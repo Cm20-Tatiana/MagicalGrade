@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="bg7"></div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <button class="timeline-point" onclick="Plato(); resetText();"><span class="timeline-year">2020</span></button>
+      <button class="timeline-point" onclick="JuliusCaesar(); resetText();"><span class="timeline-year">2021</span></button>
+      <button class="timeline-point" onclick="LeonardoDaVinci(); resetText();"><span class="timeline-year">2022</span></button>
+      <button class="timeline-point" onclick="LouisXIV(); resetText();"><span class="timeline-year">2023</span></button>
+      <button class="timeline-point" onclick="JaneAusten(); resetText();"><span class="timeline-year">2024</span></button>
+      <button class="timeline-point" onclick="MarieCurie(); resetText();"><span class="timeline-year">2025</span></button>
+      <button class="timeline-point" onclick="FridaKahlo(); resetText();"><span class="timeline-year">2026</span></button>
+      <button class="timeline-point" onclick="MartinLutherKing(); resetText();"><span class="timeline-year">2027</span></button>
+    </div>
+
+    <div class="container6">
+        <img src="imagens/history/Plato.png" class="image-container2" alt="My Image" />
+        <div class="speech-bubble2">
+          <div id="text">
+            <p id="text0">...</p>
+            <p id="text1">My name is Plato and I'm a philosopher and mathematician in ancient Greece.</p>
+            <p id="text2">I wrote many different books about my ideas and beliefs. I also founded the Academy in Athens, which became a model for modern universities.</p>
+            <p id="text3">Socrates, another great philosopher, was my teacher. I also taught another well known philosopher, Aristoteles.</p>
+            <p id="text4">My best-known work was called 'The Republic', in which I discuss the meaning of justice, the ideal state and the role of the philosopher. Some other books that I wrote include Laws, Apology, Gorgias, and Sophist.</p>
+          </div>
+      </div>
+      <div class="buttons2">
+        <button class="button" onclick="showText(1)">Who are you?</button>
+        <button class="button" onclick="showText(2)">What important things did you do?</button>
+        <button class="button" onclick="showText(3)">Who was your teacher?</button>
+        <button class="button" onclick="showText(4)">Which books have you written?</button>
+      </div>
+
+    
+    <script>
+
+        function resetText() {
+        let textElems = document.querySelectorAll("#text p");
+        textElems.forEach(elem => {
+          elem.style.display = "none";
+          elem.classList.add("hidden");
+        });
+      
+        let textElem = document.querySelector("#text0");
+        textElem.style.display = "block";
+        textElem.classList.remove("hidden");
+      }
+
+      function showText(num) {
+        let textElems = document.querySelectorAll("#text p");
+        textElems.forEach(elem => {
+          elem.style.display = "none";
+          elem.classList.add("hidden");
+        });
+      
+        let textElem = document.querySelector(`#text${num}`);
+        if (textElem) {
+          textElem.style.display = "block";
+          textElem.classList.remove("hidden");
+        }
+      }
+
+      const timeline = document.getElementById(".timeline");
+      const textElems = document.querySelectorAll("#text p");
+
+      timeline.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => {
+          textElems.forEach((elem) => {
+            elem.style.display = "none";
+          });
+          document.getElementById("text0").style.display = "block";
+        });
+      });
+            
+      function Plato() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "Who was your teacher?";
+          buttons[3].innerText = "Which books have you written?";
+          document.getElementById("text1").innerText = "My name is Plato and I'm a philosopher and mathematician in ancient Greece..";
+          document.getElementById("text2").innerText = "I wrote many different books about my ideas and beliefs. I also founded the Academy in Athens, which became a model for modern universities.";
+          document.getElementById("text3").innerText = "Socrates, another great philosopher, was my teacher. I also taught another well known philosopher, Aristoteles.";
+          document.getElementById("text4").innerText = "My best-known work was called 'The Republic', in which I discuss the meaning of justice, the ideal state and the role of the philosopher. Some other books that I wrote include Laws, Apology, Gorgias, and Sophist.";
+          document.querySelector(".image-container2").src = "imagens/history/Plato.png";
+          translationEnabled = true;
+        }
+      }
+      
+      function JuliusCaesar() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "How did you die?";
+          buttons[3].innerText = "What is your legacy?";
+          document.getElementById("text1").innerText = "I am Julius Caesar, a famous leader who lived a long time ago in ancient Rome.";
+          document.getElementById("text2").innerText =  "I was a great leader and soldier, helping expand the Roman Empire's territory. I reformed the government to help common people, built new things like roads and buildings and made a new calendar that we still use now.";
+          document.getElementById("text3").innerText = "Many senators feared my power and ambition, making me a threat to the traditional political order of the Roman Republic. Because of that, a group of senators assassinated me.";
+          document.getElementById("text4").innerText = "I played a key role in the transformation of Rome from a republic to an empire, and my life and death have been the subject of countless works of literature, art, and drama throughout history.";
+          document.querySelector(".image-container2").src = "imagens/history/JuliusCaesar.png";
+          translationEnabled = true;
+        }
+      }
+
+      function LeonardoDaVinci() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "What was your style of painting?";
+          buttons[3].innerText = "What were some of your most famous works?";
+          document.getElementById("text1").innerText = "I am Leonardo da Vinci, an Italian artist, inventor, engineer, and scientist who lived during the Renaissance period.";
+          document.getElementById("text2").innerText =  "I made important contributions to fields such as anatomy, botany, and geology. I also created designs for inventions such as flying machines and tanks, and artistic works.";
+          document.getElementById("text3").innerText = "I was known for his use of sfumato, a technique that involves blending colors together to create a soft, hazy effect.";
+          document.getElementById("text4").innerText = "My most famous works include the Mona Lisa, The Last Supper, and Vitruvian Man.";
+          document.querySelector(".image-container2").src = "imagens/history/LeonardoDaVinci.png";
+          translationEnabled = true;
+        }
+      }
+
+      function LouisXIV() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "How did you become the king of France?";
+          buttons[3].innerText = "What is the Palace of Versailles?";
+          document.getElementById("text1").innerText = "I am Louis XIV, also known as the Sun King, the longest-reigning monarch in French history.";
+          document.getElementById("text2").innerText =  "I centralized power in the monarchy, promoted the arts, built the Palace of Versailles, and expanded France's borders.";
+          document.getElementById("text3").innerText = "I became the king of France at the age of four, upon the death of my father, Louis XIII. My mother, Anne of Austria, served as regent until I was an adult.";
+          document.getElementById("text4").innerText = "The Palace of Versailles is a grand palace that I built to showcase the power and wealth of France. It served as my official residence and the seat of government for many years.";
+          document.querySelector(".image-container2").src = "imagens/history/LouisXIV.png";
+          translationEnabled = true;
+        }
+      }
+
+      function JaneAusten() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "What themes did you explore in your novels?";
+          buttons[3].innerText = "How did your writing style differ from other authors of your time?";
+          document.getElementById("text1").innerText = "I am Jane Austen, an English novelist known for my social commentary and insightful portrayals of everyday life in Regency England.";
+          document.getElementById("text2").innerText =  "I wrote six novels, including Pride and Prejudice and Sense and Sensibility, which have become beloved classics of English literature and continue to be widely read and studied today.";
+          document.getElementById("text3").innerText = "I was interested in exploring the lives of women in Regency society and their struggles with the constraints and expectations placed upon them. I also explored themes of class, social status, and the importance of finding true love and happiness.";
+          document.getElementById("text4").innerText = "I wrote with a wit and irony that was unusual for female writers of my time, and my unique perspective on human behavior and society.";
+          document.querySelector(".image-container2").src = "imagens/history/JaneAusten.png";
+          translationEnabled = true;
+        }
+      }
+
+      function MarieCurie() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "What inspired you to pursue a career in science?";
+          buttons[3].innerText = "How did your work in radioactivity impact the scientific community?";
+          document.getElementById("text1").innerText = "I am Marie Curie, a physicist and chemist who made groundbreaking discoveries in the field of radioactivity.";
+          document.getElementById("text2").innerText =  "I discovered two new elements, polonium and radium, and pioneered the use of radiation in medicine. I was also the first woman to receive a Nobel Prize.";
+          document.getElementById("text3").innerText = "I was always curious about the world around me, and as a young woman in Poland, I was determined to pursue an education and career in science despite the barriers and obstacles that existed for women at the time.";
+          document.getElementById("text4").innerText = "My discoveries in radioactivity fundamentally changed our understanding of the nature of matter and energy, and paved the way for numerous scientific and medical advancements in the decades that followed.";
+          document.querySelector(".image-container2").src = "imagens/history/MarieCurie.png";
+          translationEnabled = true;
+        }
+      }
+
+      function FridaKahlo() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "How did your artwork challenge traditional gender roles?";
+          buttons[3].innerText = "What role did your Mexican heritage play in your art?";
+          document.getElementById("text1").innerText = "I am Frida Kahlo, a Mexican artist known for my self-portraits and bold use of color.";
+          document.getElementById("text2").innerText =  "I created over 200 paintings, many of which explore themes of identity, suffering, and Mexican culture. My work has had a significant impact on the art world and continues to inspire artists today.";
+          document.getElementById("text3").innerText = "My self-portraits often portrayed me in unconventional and unexpected ways, challenging traditional notions of femininity and beauty. I also explored themes of female empowerment and identity.";
+          document.getElementById("text4").innerText = "My art celebrated Mexican culture and traditions, including indigenous customs and iconography. I was proud of my heritage and sought to capture its vibrancy and beauty in my paintings.";
+          document.querySelector(".image-container2").src = "imagens/history/FridaKahlo.png";
+          translationEnabled = true;
+        }
+      }
+
+      function MartinLutherKing() {
+        let buttons = document.getElementsByClassName("button");
+        let translationEnabled = false;
+        if (!translationEnabled) {
+          buttons[2].innerText = "How did you become involved in the civil rights movement?";
+          buttons[3].innerText = "What legacy do you hope to leave behind?";
+          document.getElementById("text1").innerText = " I am Martin Luther King Jr., a Baptist minister and civil rights activist who fought for racial equality and justice in the United States.";
+          document.getElementById("text2").innerText =  "I led the Civil Rights Movement in the United States, advocating for racial equality and justice through nonviolent means. My leadership and activism played a significant role in ending legalized discrimination in the United States.";
+          document.getElementById("text3").innerText = "I was inspired by the teachings of Mahatma Gandhi and his philosophy of nonviolent resistance. I saw the injustices and inequalities faced by African Americans in my own community and wanted to change that.";
+          document.getElementById("text4").innerText = "I hope that message of nonviolent resistance and the power of love will inspire future generations to continue the fight for equality and justice.";
+          document.querySelector(".image-container2").src = "imagens/history/MartinLutherKing.png";
+          translationEnabled = true;
+        }
+      }
+
+    </script>
+         
+    </body>
+</html>

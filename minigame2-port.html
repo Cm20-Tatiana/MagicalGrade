@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="bg4"></div>
+        <div id="plates">
+            <img id="plate1" src="imagens/plate.png" alt="">
+            <img id="plate2" src="imagens/plate.png" alt="">
+            <img id="plate3" src="imagens/plate.png" alt="">
+            <img id="plate4" src="imagens/plate.png" alt="">
+        </div>
+        <div id="pizza">
+            <img id="pizza1" src="imagens/pizza/pizza10.png" alt="">
+            <img id="pizza2" src="imagens/pizza/pizza10.png" alt="">
+            <img id="pizza3" src="imagens/pizza/pizza10.png" alt="">
+            <img id="pizza4" src="imagens/pizza/pizza10.png" alt="">
+        </div>
+
+
+        <form id="calculadora">
+            <input type="number" id="num" placeholder="Insere um número">
+            <br><br>
+            <select id="operation">
+                <option value="add">Adicionar</option>
+                <option value="subtract">Subtair</option>
+                <option value="multiply">Multiplicar</option>
+                <option value="divide">Dividir</option>
+            </select>
+            <br><br>
+            <button type="button" onclick="calculate()">Calcular</button>
+            <br><br>
+            <input type="number" id="total" name="total" value="0" readonly>
+        </form>
+    
+<script>
+            function calculate() {
+                var total = parseFloat(document.getElementById("total").value);
+                var num = parseFloat(document.getElementById("num").value);
+                var operation = document.getElementById("operation").value;
+
+    
+                switch (operation) {
+                    case "add":
+                        total += num;
+                        break;
+                    case "subtract":
+                        total -= num;
+                        break;
+                    case "multiply":
+                        total *= num;
+                        break;
+                    case "divide":
+                        if (num == 0) {
+                            alert("Error: Não é possível dividir por zero");
+                        } else {
+                            total /= num;
+                        }
+                        break;
+                        default:
+                            alert("Error: Operação inválida delecionada.");
+                        break;
+                }
+    
+                if (total > 40) {
+                    total = 40;
+                    alert("Error: O total não pode ultrapassar 40.");
+                }
+    
+                
+                if (total < 0) {
+                    total = 0;
+                    alert("Error: O total não pode ter números negativos");
+                }
+    
+                if (!Number.isInteger(total)) {
+                    total = 0;
+                    alert("O total deve ser um número inteiro. Por favor tenta novamente.");
+                }
+
+                
+                document.getElementById("total").value = total;
+
+                if (total >= 1 && total <= 10) {
+                document.getElementById("pizza1").style.display = "block";
+                document.getElementById("pizza2").style.display = "none";
+                document.getElementById("pizza3").style.display = "none";
+                document.getElementById("pizza4").style.display = "none";
+                switch (total) {
+                    case 1:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza1.png";
+                    break;
+                    case 2:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza2.png";
+                    break;
+                    case 3:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza3.png";
+                    break;
+                    case 4:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza4.png";
+                    break;
+                    case 5:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza5.png";
+                    break;
+                    case 6:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza6.png";
+                    break;
+                    case 7:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza7.png";
+                    break;
+                    case 8:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza8.png";
+                    break;
+                    case 9:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza9.png";
+                    break;
+                    case 10:
+                    document.getElementById("pizza1").src = "imagens/pizza/pizza10.png";
+                    break;
+                }
+
+                } else if (total > 10 && total <= 20) {
+                document.getElementById("pizza1").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza1").style.display = "block";
+                document.getElementById("pizza2").style.display = "block";
+                document.getElementById("pizza3").style.display = "none";
+                document.getElementById("pizza4").style.display = "none";
+                switch (total) {
+                    case 11:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza1.png";
+                    break;
+                    case 12:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza2.png";
+                    break;
+                    case 13:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza3.png";
+                    break;
+                    case 14:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza4.png";
+                    break;
+                    case 15:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza5.png";
+                    break;
+                    case 16:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza6.png";
+                    break;
+                    case 17:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza7.png";
+                    break;
+                    case 18:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza8.png";
+                    break;
+                    case 19:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza9.png";
+                    break;
+                    case 20:
+                    document.getElementById("pizza2").src = "imagens/pizza/pizza10.png";
+                    break;
+                }
+                } else if (total >= 21 && total <= 30) {
+                document.getElementById("pizza1").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza2").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza1").style.display = "block";
+                document.getElementById("pizza2").style.display = "block";
+                document.getElementById("pizza3").style.display = "block";
+                document.getElementById("pizza4").style.display = "none";
+                switch (total) {
+                    case 21:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza1.png";
+                    break;
+                    case 22:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza2.png";
+                    break;
+                    case 23:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza3.png";
+                    break;
+                    case 24:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza4.png";
+                    break;
+                    case 25:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza5.png";
+                    break;
+                    case 26:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza6.png";
+                    break;
+                    case 27:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza7.png";
+                    break;
+                    case 28:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza8.png";
+                    break;
+                    case 29:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza9.png";
+                    break;
+                    case 30:
+                    document.getElementById("pizza3").src = "imagens/pizza/pizza10.png";
+                    break;
+                }
+                } else if (total >= 31 && total <= 39) {
+                document.getElementById("pizza1").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza2").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza3").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza1").style.display = "block";
+                document.getElementById("pizza2").style.display = "block";
+                document.getElementById("pizza3").style.display = "block";
+                document.getElementById("pizza4").style.display = "block";
+                switch (total) {
+                    case 31:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza1.png";
+                    break;
+                    case 32:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza2.png";
+                    break;
+                    case 33:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza3.png";
+                    break;
+                    case 34:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza4.png";
+                    break;
+                    case 35:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza5.png";
+                    break;
+                    case 36:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza6.png";
+                    break;
+                    case 37:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza7.png";
+                    break;
+                    case 38:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza8.png";
+                    break;
+                    case 39:
+                    document.getElementById("pizza4").src = "imagens/pizza/pizza9.png";
+                    break;
+                }
+                } else if (total === 40) {
+                document.getElementById("pizza1").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza2").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza3").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza4").src = "imagens/pizza/pizza10.png";
+                document.getElementById("pizza1").style.display = "block";
+                document.getElementById("pizza2").style.display = "block";
+                document.getElementById("pizza3").style.display = "block";
+                document.getElementById("pizza4").style.display = "block";
+                } else {
+                document.getElementById("pizza1").style.display = "none";
+                document.getElementById("pizza2").style.display = "none";
+                document.getElementById("pizza3").style.display = "none";
+                document.getElementById("pizza4").style.display = "none";
+                }
+            }
+     
+        
+        </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="bg6"></div>
+    <div class="container6">
+      <div class="image-container">
+        <img src="imagens/languages/british.png" alt="My Image" class="image" />
+        <div class="speech-bubble">
+          <div id="text">
+            <p id="text0">...</p>
+            <p id="text1">Hello! I'm fine.</p>
+            <p id="text2">My name is Alexander</p>
+            <p id="text3">I speak english</p>
+            <p id="text4">I'm 28 years old.</p>
+            <p id="text5">I like hanging out with friends and exploring.</p>
+            <p id="text6">My favourite animal is the cat.</p>
+            <p id="text7">My favourite color is blue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="button button1" onclick="showText(1)">Hello! How are you?</button>
+        <button class="button button2" onclick="showText(2)">What is your name?</button>
+        <button class="button button3" onclick="showText(3)">What language do you speak?</button>
+        <button class="button button4" onclick="showText(4)">How old are you?</button>
+        <button class="button button5" onclick="showText(5)">What do you like to do in your free time?</button>
+        <button class="button button6" onclick="showText(6)">What is your favorite animal?</button>
+        <button class="button button7" onclick="showText(7)">What is your favorite color?</button>
+
+      </div>
+      <div class="flags">
+        <a href="minigame4.1-eng.html"><img class="british" src="imagens/eng.png"></a> 
+        <a href="minigame4.2-eng.html"><img class="german" src="imagens/french.png"></a>
+        <a href="minigame4.3-eng.html"><img class="french" src="imagens/german.png"></a>
+        <a href="minigame4.4-eng.html"><img class="italian" src="imagens/spanish.png"></a>
+        <a href="minigame4.5-eng.html"><img class="spanish" src="imagens/italian.png"></a>
+      </div>
+    </div>
+
+    <nav class="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <img class="hamburger" src="imagens/hm.png">
+
+          <ul id="menu">
+            <a class="first_a" href="#"><li>Sobre</li></a>
+            <a href="#"><li>Personagens</li></a>
+            <a href="#"><li>Comics</li></a>
+            <a href="#"><li>Contactos</li></a>
+          </ul>
+        </div>
+    </nav>
+    
+  <script>
+
+  function showText(num) {
+  // hide all text paragraphs
+  let textElems = document.querySelectorAll("#text p");
+  textElems.forEach(elem => {
+    elem.style.display = "none";
+    elem.classList.add("hidden");
+  });
+
+  // show the corresponding text paragraph
+  let textElem = document.querySelector(`#text${num}`);
+  if (textElem) {
+    textElem.style.display = "block";
+    textElem.classList.remove("hidden");
+  }
+}
+
+
+  </script>
+    </body>
+</html>

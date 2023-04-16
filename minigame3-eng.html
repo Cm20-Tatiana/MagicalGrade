@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="bg5"></div>
+    <div class="container5">
+        <img id="animals" src="imagens/animals/wolf.png">
+        <button id="buttonleft"></button>
+        <button id="buttonright"></button>
+        <button></button>
+        <div id="aliments">
+            <img src="imagens/alimentos.png" alt="">
+            <div id="buttons">
+                <button id="meat">Meat</button>
+                <button id="plants">Plants</button>
+                <button id="insects">Insects</button>
+                <button id="grains">Grains</button>
+                <button id="plants-meat">Plants and Meat</button>
+            </div>
+        </div>
+        <div id="message">
+            <span id="message-text"></span>
+            <button id="close-btn">X</button>
+        </div>
+    </div>
+
+        <nav class="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <img class="hamburger" src="imagens/hm.png">
+    
+              <ul id="menu">
+                <a class="first_a" href="#"><li>Sobre</li></a>
+                <a href="#"><li>Personagens</li></a>
+                <a href="#"><li>Comics</li></a>
+                <a href="#"><li>Contactos</li></a>
+              </ul>
+            </div>
+        </nav>
+
+        <script>
+const images = ["imagens/animals/wolf.png", "imagens/animals/bunny.png", "imagens/animals/frog.png", "imagens/animals/chicken.png", "imagens/animals/bear.png"];
+const aliments = {
+    "imagens/animals/wolf.png": "meat",
+    "imagens/animals/bunny.png": "plants",
+    "imagens/animals/frog.png": "insects",
+    "imagens/animals/chicken.png": "grains",
+    "imagens/animals/bear.png": "plants-meat"
+};
+
+const messages = {
+  "meat": "Correct! The wolf is a carnivore, just like lions, tigers, and crocodiles, among others.",
+  "plants": "Correct! The rabbit is a herbivore, just like cows, horses, and deer, among others.",
+  "insects": "Correct! The frog is an insectivore, just like bats, birds, and many species of fish.",
+  "grains": "Correct! The chicken is a granivore, just like doves, sparrows, and hamsters, among others.",
+  "plants-meat": "Correct! The bear is an omnivore, just like pigs, raccoons, and many primates, among others.",
+  "wrong": "Wrong! Please try again."
+};
+
+
+
+let currentImageIndex = 0;
+const animalsImg = document.getElementById("animals");
+const buttonLeft = document.getElementById("buttonleft");
+const buttonRight = document.getElementById("buttonright");
+const meatBtn = document.getElementById("meat");
+const plantsBtn = document.getElementById("plants");
+const insectsBtn = document.getElementById("insects");
+const grainsBtn = document.getElementById("grains");
+const plantsMeatBtn = document.getElementById("plants-meat");
+const messageDiv = document.getElementById("message");
+const messageText = document.getElementById("message-text");
+const closeBtn = document.getElementById("close-btn");
+
+function updateImage() {
+    animalsImg.src = images[currentImageIndex];
+    messageDiv.style.display = "none";
+    const correctAliment = aliments[images[currentImageIndex]];
+    meatBtn.onclick = () => {
+        showMessage(correctAliment === "meat" ? "meat" : "wrong");
+    };
+    plantsBtn.onclick = () => {
+        showMessage(correctAliment === "plants" ? "plants" : "wrong");
+    };
+    insectsBtn.onclick = () => {
+        showMessage(correctAliment === "insects" ? "insects" : "wrong");
+    };
+    grainsBtn.onclick = () => {
+        showMessage(correctAliment === "grains" ? "grains" : "wrong");
+    };
+    plantsMeatBtn.onclick = () => {
+        showMessage(correctAliment === "plants-meat" ? "plants-meat" : "wrong");
+    };
+}
+
+function showMessage(message) {
+    messageText.textContent = messages[message];
+    messageDiv.style.display = "block";
+}
+
+function hideMessage() {
+    messageDiv.style.display = "none";
+}
+
+buttonLeft.onclick = () => {
+    currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+    updateImage();
+};
+
+buttonRight.onclick = () => {
+    currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+    updateImage();
+};
+
+closeBtn.onclick = () => {
+    hideMessage();
+};
+
+updateImage();
+
+</script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="containereng">
+    <div class="container">
+      <div class="bg1"></div>
+      <a href="intro-eng.html" class="play"></a>
+
+  </div>    
+              
+  <nav class="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <img class="hamburger" src="imagens/hm.png">
+
+        <button><img id="port" src="imagens/port.png"></button>
+        <button><img id="eng" src="imagens/eng.png"></button>
+        
+      	<div id="logos-container">
+          <img src="imagens/knowledgecorner.svg" alt="Logo" class="logo">
+          <img src="imagens/magicalgrade.svg" alt="Logo" class="logo">
+        </div>
+    
+
+        <ul id="menu">
+          <a class="first_a active" href="index.html"><li>Jogar</li></a>
+          <a href="#"><li>Sobre</li></a>
+          <a href="#"><li>Personagens</li></a>
+          <a href="#"><li>Contactos</li></a>
+        </ul>
+      </div>
+  </nav>
+</div>
+
+<div id="containerport" style="display:none">
+    <div class="container">
+      <div class="bg1"></div>
+      <a href="intro-port.html" class="jogar"></a>
+  </div>    
+  <nav class="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <img class="hamburger" src="imagens/hm.png">
+
+        <button><img id="port2" src="imagens/port.png"></button>
+        <button><img id="eng2" src="imagens/eng.png"></button>
+
+      	<div id="logos-container">
+          <img src="imagens/knowledgecorner.svg" alt="Logo" class="logo">
+          <img src="imagens/magicalgrade.svg" alt="Logo" class="logo">
+        </div>
+
+        <ul id="menu">
+          <a class="first_a" href="#"><li>Sobre</li></a>
+          <a href="#"><li>Personagens</li></a>
+          <a href="#"><li>Comics</li></a>
+          <a href="#"><li>Contactos</li></a>
+        </ul>
+      </div>
+  </nav>
+</div>
+
+
+<script>
+  const port = document.querySelector('#port');
+  const eng = document.querySelector('#eng');
+  const port2 = document.querySelector('#port2');
+  const eng2 = document.querySelector('#eng2');
+  const containereng = document.querySelector('#containereng');
+  const containerport = document.querySelector('#containerport');
+
+  eng.addEventListener('click', function() {
+    containereng.style.display = 'block';
+    containerport.style.display = 'none';
+  });
+
+  eng2.addEventListener('click', function() {
+    containereng.style.display = 'block';
+    containerport.style.display = 'none';
+  });
+
+  port.addEventListener('click', function() {
+    containereng.style.display = 'none';
+    containerport.style.display = 'block';
+  });
+
+  port2.addEventListener('click', function() {
+    containereng.style.display = 'none';
+    containerport.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>

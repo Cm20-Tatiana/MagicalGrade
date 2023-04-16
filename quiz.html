@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			text-align: center;
+			font-size: 24px;
+			margin-top: 50px;
+		}
+		h1 {
+			font-size: 36px;
+			margin-bottom: 30px;
+		}
+		button {
+			margin-top: 20px;
+			font-size: 24px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Question 1: What is the capital of France?</h1>
+	<button id="option1" onclick="checkAnswer(1)">New York</button>
+	<button id="option2" onclick="checkAnswer(2)">London</button>
+	<button id="option3" onclick="checkAnswer(3)">Paris</button>
+
+	<script>
+		var questionNumber = 1;
+		var correctAnswer = 3;
+
+		function checkAnswer(selectedOption) {
+			if (selectedOption === correctAnswer) {
+				alert("Correct!");
+			} else {
+				alert("Wrong answer, try again!");
+				return;
+			}
+
+			// Change the question and options
+			switch (questionNumber) {
+				case 1:
+					document.querySelector("h1").innerHTML = "Question 2: What is the largest planet in our solar system?";
+					document.querySelector("#option1").innerHTML = "Mars";
+					document.querySelector("#option2").innerHTML = "Jupiter";
+					document.querySelector("#option3").innerHTML = "Venus";
+					correctAnswer = 2;
+					questionNumber++;
+					break;
+				case 2:
+					document.querySelector("h1").innerHTML = "Question 3: What is the highest mountain in the world?";
+					document.querySelector("#option1").innerHTML = "Mount Everest";
+					document.querySelector("#option2").innerHTML = "Mount Kilimanjaro";
+					document.querySelector("#option3").innerHTML = "Mount Fuji";
+					correctAnswer = 1;
+					questionNumber++;
+					break;
+				// Add more cases for additional questions
+				default:
+					document.querySelector("h1").innerHTML = "Quiz complete!";
+					document.querySelector("#option1").style.display = "none";
+					document.querySelector("#option2").style.display = "none";
+					document.querySelector("#option3").style.display = "none";
+					break;
+			}
+		}
+	</script>
+</body>
+</html>

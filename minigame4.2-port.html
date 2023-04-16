@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="bg6"></div>
+    <div class="container6">
+      <div class="image-container">
+        <img src="imagens/languages/french.png" alt="My Image" class="image" />
+        <div class="speech-bubble">
+          <div id="text">
+            <p id="text0">...</p>
+            <p id="text1">Bonjour! Je vais bien.</p>
+            <p id="text2">Mon nom est Louise.</p>
+            <p id="text3">Je parle français.</p>
+            <p id="text4">J'ai 23 ans.</p>
+            <p id="text5">J'aime peindre et écouter de la musique.</p>
+            <p id="text6">Mon animal préféré est le lapin.</p>
+            <p id="text7">Ma couleur préférée est le rouge.</p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="button button1" onclick="showText(1)">Bonjour! Comment ça va?</button>
+        <button class="button button2" onclick="showText(2)">Quel est ton nom?</button>
+        <button class="button button3" onclick="showText(3)">Quelle langue parlez-vous?</button>
+        <button class="button button4" onclick="showText(4)">Quel âge as-tu?</button>
+        <button class="button button5" onclick="showText(5)">Qu'est-ce que tu aimes faire pendant ton temps libre?</button>
+        <button class="button button6" onclick="showText(6)">Quel est votre animal préféré?</button>
+        <button class="button button7" onclick="showText(7)">Quelle est ta couleur préférée?</button>
+       
+        <button class="button" onclick="toggleTranslation()">Traduzir</button>
+      </div>
+      <div class="flags">
+        <a href="minigame4.1-port.html"><img class="british" src="imagens/eng.png"></a> 
+        <a href="minigame4.2-port.html"><img class="german" src="imagens/french.png"></a>
+        <a href="minigame4.3-port.html"><img class="french" src="imagens/german.png"></a>
+        <a href="minigame4.4-port.html"><img class="italian" src="imagens/spanish.png"></a>
+        <a href="minigame4.5-port.html"><img class="spanish" src="imagens/italian.png"></a>
+      </div>
+    </div>
+
+  <script>
+
+  function showText(num) {
+  // hide all text paragraphs
+  let textElems = document.querySelectorAll("#text p");
+  textElems.forEach(elem => {
+    elem.style.display = "none";
+    elem.classList.add("hidden");
+  });
+
+  // show the corresponding text paragraph
+  let textElem = document.querySelector(`#text${num}`);
+  if (textElem) {
+    textElem.style.display = "block";
+    textElem.classList.remove("hidden");
+  }
+}
+
+    let translationEnabled = false;
+
+
+    function toggleTranslation() {
+      let translateButton = document.getElementsByClassName("button")[7];
+      let buttons = document.getElementsByClassName("button");
+      if (!translationEnabled) {
+        buttons[0].innerText = "Olá! Como estás?";
+        buttons[1].innerText = "Qual é o teu nome?";
+        buttons[2].innerText = "Qual é a língua que tu falas?";
+        buttons[3].innerText = "Quantos anos tens??";
+        buttons[4].innerText = "O que gostas de fazer no teu tempo livre?";
+        buttons[5].innerText = "Qual é o teu animal favorito?";
+        buttons[6].innerText = "Qual a tua cor preferida??";
+        document.getElementById("text1").innerText = "Olá! Eu estou bem.";
+        document.getElementById("text2").innerText = "O meu nome é Louise.";
+        document.getElementById("text3").innerText = "Eu falo francês.";
+        document.getElementById("text4").innerText = "Eu tenho 23 anos.";
+        document.getElementById("text5").innerText = "Eu gosto de pintar e ouvir música.";
+        document.getElementById("text6").innerText = "O meu animal preferido é o coelho.";
+        document.getElementById("text7").innerText = "A minha cor preferida é vermelho.";
+        translateButton.innerText = "Retornar";
+        translationEnabled = true;
+      } else {
+        buttons[0].innerText = "Bonjour! Comment ça va?";
+        buttons[1].innerText = "Quel est ton nom?";
+        buttons[2].innerText = "Quelle langue parlez-vous??";
+        buttons[3].innerText = "Quel âge as-tu?";
+        buttons[4].innerText = "Qu'est-ce que tu aimes faire pendant ton temps libre?";
+        buttons[5].innerText = "Quel est votre animal préféré?";
+        buttons[6].innerText = "Quelle est ta couleur préférée?";
+        text1.innerText = "Bonjour! Je vais bien.";
+        text2.innerText = "Mon nom est Louise.";
+        text3.innerText = "Je parle français.";
+        text4.innerText = "J'ai 23 ans.";
+        text5.innerText = "J'aime peindre et écouter de la musique.";
+        text6.innerText = "Mon animal préféré est le lapin.";
+        text7.innerText = "Ma couleur préférée est le rouge.";
+        translateButton.innerText = "Traduzir";
+        translationEnabled = false;
+      }
+    }
+  </script>
+    </body>
+</html>
