@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--	<div id="container3">
+        <div id="bg2_1"></div>
+        <div class="students">
+            <div class="student1">
+                <img src="imagens/choosestudent1.png" alt="">
+                <button id="student_choose1">Sylvan</button>
+                <p>Ciências Naturais: ☆☆☆☆☆</p>
+                <p>História: ☆☆☆☆</p>
+                <p>Matemática: ☆☆☆</p>
+                <p>Línguas: ☆☆</p>
+                <p>Arte: ☆</p>
+            </div>
+            <div class="student2">
+                <img src="imagens/choosestudent2.png" alt="">
+                <button id="student_choose2">Ellie</button>
+                <p>Línguas: ☆☆☆☆☆</p>
+                <p>Arte: ☆☆☆☆</p>
+                <p>Ciências Naturais: ☆☆☆</p>
+                <p>História: ☆☆</p>
+                <p>Matemática: ☆</p>
+            </div>
+            <div class="student3">
+                <img src="imagens/choosestudent.png" alt="">
+                <button id="student_choose3">Milly</button>
+                <p>Arte: ☆☆☆☆☆</p>
+                <p>Matemática: ☆☆☆☆</p>
+                <p>Línguas: ☆☆☆</p>
+                <p>Ciências Naturais: ☆☆</p>
+                <p>História: ☆</p>
+            </div>
+            <div class="student4">
+                <img src="imagens/choosestudent.png" alt="">
+                <button id="student_choose4">Avery</button>
+                <p>Matemática: ☆☆☆☆☆</p>
+                <p>Línguas: ☆☆☆☆</p>
+                <p>História: ☆☆☆</p>
+                <p>Arte: ☆☆</p>
+                <p>Ciências Naturais: ☆</p>
+            </div>
+            <div class="student5">
+                <img src="imagens/choosestudent.png" alt="">
+                <button id="student_choose5">Flyn</button>
+                <p>História: ☆☆☆☆☆</p>
+                <p>Ciências Naturais: ☆☆☆☆</p>
+                <p>Arte: ☆☆☆</p>
+                <p>Matemática: ☆☆</p>
+                <p>Línguas: ☆</p>
+            </div>
+    </div>-->
+	<div class="container4">
+		<div id="bg8"></div>
+
+		<div class="containerart">
+			<h1>Art</h1>
+			<h3>1. What are the primary colors?</h1>
+			<button class="quizbutton" id="option1" onclick="checkAnswer(1)">Red, Green and Blue</button>
+			<button class="quizbutton" id="option2" onclick="checkAnswer(2)">Blue, Yellow and Red</button>
+			<button class="quizbutton" id="option3" onclick="checkAnswer(3)">Purple, Green and Blue</button>
+		</div>
+	</div>
+
+
+
+	<script>
+		var questionNumber = 1;
+		var correctAnswer = 2;
+
+		function checkAnswer(selectedOption) {
+			if (selectedOption === correctAnswer) {
+				alert("Correct!");
+			} else {
+				alert("Wrong answer, try again!");
+				return;
+			}
+
+			// Change the question and options
+			switch (questionNumber) {
+				case 1:
+					document.querySelector("h3").innerHTML = "2. What are the secondary colors?";
+					document.querySelector("#option1").innerHTML = "Orange, Green and Purple";
+					document.querySelector("#option2").innerHTML = "Yellow, Blue and Green";
+					document.querySelector("#option3").innerHTML = "Purple, Orange and White";
+					correctAnswer = 1;
+					questionNumber++;
+					break;
+				case 2:
+					document.querySelector("h3").innerHTML = "3. What color is the result of mixing blue and yellow?";
+					document.querySelector("#option1").innerHTML = "Cyan";
+					document.querySelector("#option2").innerHTML = "Purple";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 3;
+					questionNumber++;
+					break;
+				case 3:
+					document.querySelector("h3").innerHTML = "4. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 4:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "5. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 5:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "5. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 6:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "5. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 7:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "5. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 8:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "5. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 9:
+					document.querySelector("h1").innerHTML = "Natural Science";
+					document.querySelector("h3").innerHTML = "5. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				// Add more cases for additional questions
+				default:
+					document.querySelector("h3").innerHTML = "Quiz complete!";
+					document.querySelector("#option1").style.display = "none";
+					document.querySelector("#option2").style.display = "none";
+					document.querySelector("#option3").style.display = "none";
+					break;
+			}
+		}
+	</script>
+</body>
+</html>

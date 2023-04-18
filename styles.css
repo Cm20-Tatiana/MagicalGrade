@@ -242,10 +242,6 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 
-#container2, #container3 {
-  display: none;
-}
-
 #falas {
     display: none;
     animation: fadeIn 2s;
@@ -264,10 +260,17 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 .spritedeli {
-  position: absolute; left:16%;
+  position: absolute; left:200px;
   z-index: 1;
   width: 370px;
-  bottom: 0px;
+  bottom: 35px;
+}
+
+.spritestudent {
+  position: absolute; right:200px;
+  z-index: 1;
+  width: 350px;
+  bottom: 50px;
 }
 
 
@@ -319,8 +322,8 @@ input[type=checkbox]:checked ~ #menu {
     opacity: 0.8;     
 }
 
-#p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10 {
-    display: none;
+.dialogo > div:not(#p1) {
+  display: none;
 }
 
 #appear {
@@ -869,4 +872,8 @@ bottom: 20px;
   background-color: #64334c;
   color: #FFFFFF;
   cursor: pointer;
+}
+
+#container4 {
+  display:none
 }
