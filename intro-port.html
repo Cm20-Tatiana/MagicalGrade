@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div id="falas">
             <img class="dialogo_box" src="imagens/dialogue.png">
              <div  class="dialogo">
-                <button id="skip">Avançar</button>
+                <button onclick="window.location.href='menu-port.html'" id="skip">Avançar</button>
                 <div id="p1">
                     <img src="imagens/sprites/delilah/deli1.png" class="spritedeli" alt="">
                     <p>Hoje é o teu primeiro dia de aulas, certo?</p>
@@ -77,8 +78,7 @@
                 currentParagraph++;
         
                 if (currentParagraph >= paragraphs.length) {
-                    div1.style.display = 'none';
-                    div2.style.display = 'block';
+                    window.location.replace('menu-port.html');
                     return;
                 }
         
@@ -92,27 +92,7 @@
             document.getElementById("falas").style.display = "block";
         }
         setTimeout("showIt()", 1200); 
-        
-        const skip = document.querySelector('#skip');
-        const div1 = document.querySelector('#container1');
-        const div2 = document.querySelector('#container2');
-        
-        
-        skip.addEventListener('click', () => {
-            div1.style.display = 'none';
-            div2.style.display = 'block';
-        });
-        
-        
-           const quiz = document.querySelector('#quiz');
-            const div3 = document.querySelector('#container3');
-        
-        
-        quiz.addEventListener('click', () => {
-         div2.style.display = 'none';
-            div3.style.display = 'block';
-            });
-            </script>
+    </script>
         
         
 
