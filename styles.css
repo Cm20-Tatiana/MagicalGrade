@@ -260,17 +260,17 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 .spritedeli {
-  position: absolute; left:200px;
+  position: absolute; left:220px;
   z-index: 1;
-  width: 370px;
-  bottom: 35px;
+  width: 360px;
+  bottom: 60px;
 }
 
-.spritestudent {
-  position: absolute; right:200px;
+#spritestudent {
+  position: absolute; right:220px;
   z-index: 1;
-  width: 350px;
-  bottom: 50px;
+  width: 340px;
+  bottom: 80px;
 }
 
 
