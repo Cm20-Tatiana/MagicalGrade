@@ -196,7 +196,7 @@ input[type=checkbox]:checked ~ #menu {
   position: absolute;
   top: 2px;
   left: 20px;
-  width: 180px;
+  width: 155px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -893,4 +893,8 @@ bottom: 20px;
 
 #container4 {
   display:none
+}
+
+.students p span {
+  color: #64334c;
 }

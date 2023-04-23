@@ -16,50 +16,51 @@
             <div class="student1">
                 <img src="imagens/choosestudent1.png" alt="">
                 <button onclick="intro();" id="student_choose1">Sylvan</button>
-                <p>Natural Science: ☆☆☆☆☆</p>
-                <p>History: ☆☆☆☆</p>
-                <p>Math: ☆☆☆</p>
-                <p>Languages: ☆☆</p>
-                <p>Art: ☆</p>
+                <p>Natural Science: <span>★★★★★</span></p>
+                <p>History: <span>★★★★</span></p>
+                <p>Math: <span>★★★</span></p>
+                <p>Languages: <span>★★</span></p>
+                <p>Art: <span>★</span></p>
             </div>
             <div class="student2">
                 <img src="imagens/choosestudent2.png" alt="">
                 <button onclick="Ellie(); intro();" id="student_choose2">Ellie</button>
-                <p>Languages: ☆☆☆☆☆</p>
-                <p>Art: ☆☆☆☆</p>
-                <p>Natural Science: ☆☆☆</p>
-                <p>History: ☆☆</p>
-                <p>Math: ☆</p>
+                <p>Languages: <span>★★★★★</span></p>
+                <p>Art: <span>★★★★</span></p>
+                <p>Natural Science: <span>★★★</span></p>
+                <p>History: <span>★★</span></p>
+                <p>Math: <span>★</span></p>
             </div>
             <div class="student3">
-                <img src="imagens/choosestudent.png" alt="">
+                <img src="imagens/choosestudent3.png" alt="">
                 <button onclick="Milly(); intro();" id="student_choose3">Milly</button>
-                <p>Art: ☆☆☆☆☆</p>
-                <p>Math: ☆☆☆☆</p>
-                <p>Languages: ☆☆☆</p>
-                <p>Natural Science: ☆☆</p>
-                <p>History: ☆</p>
+                <p>Art: <span>★★★★★</span></p>
+                <p>Math: <span>★★★★</span></p>
+                <p>Languages: <span>★★★</span></p>
+                <p>Natural Science: <span>★★</span></p>
+                <p>History: <span>★</span></p>
             </div>
             <div class="student4">
-                <img src="imagens/choosestudent.png" alt="">
-                <button id="student_choose4">Avery</button>
-                <p>Math: ☆☆☆☆☆</p>
-                <p>Languages: ☆☆☆☆</p>
-                <p>History: ☆☆☆</p>
-                <p>Art: ☆☆</p>
-                <p>Natural Science: ☆</p>
+                <img src="imagens/choosestudent4.png" alt="">
+                <button onclick="Avery(); intro();" id="student_choose4">Avery</button>
+                <p>Math: <span>★★★★★</span></p>
+                <p>Languages: <span>★★★★</span></p>
+                <p>History: <span>★★★</span></p>
+                <p>Art: <span>★★</span></p>
+                <p>Natural Science: <span>★</span></p>
             </div>
             <div class="student5">
                 <img src="imagens/choosestudent.png" alt="">
                 <button id="student_choose5">Flyn</button>
-                <p>History: ☆☆☆☆☆</p>
-                <p>Natural Science: ☆☆☆☆</p>
-                <p>Art: ☆☆☆</p>
-                <p>Math: ☆☆</p>
-                <p>Languages: ☆</p>
+                <p>History: <span>★★★★★</span></p>
+                <p>Natural Science: <span>★★★★</span></p>
+                <p>Art: <span>★★★</span></p>
+                <p>Math: <span>★★</span></p>
+                <p>Languages: <span>★</span></p>
             </div>
         </div>
     </div>
+    
 
     
     <div id="container4">
@@ -217,11 +218,38 @@
             document.querySelector('#p10 p').innerText = "Painting helps me express myself!";
             document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Milly/milly2.png";
             document.querySelector('#p15 p').innerText = "Yeah... I know nothing about history.";
-            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Milly/milly3.png";
+            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Milly/milly4.png";
             document.querySelector('#p16 p').innerText = "However, math is also a lot of fun!";
             document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Milly/milly5.png";
         }
         
+        function Avery() {
+            document.querySelector('#p1 p').innerText = "Your partner for the quiz will be Avery!";
+            document.querySelectorAll('#p1 #spritestudent,#p6 #spritestudent,#p7 #spritestudent, #p8 #spritestudent, #p12 #spritestudent, #p13 #spritestudent, #p14 #spritestudent, #p17 #spritestudent, #p18 #spritestudent, #p19 #spritestudent').forEach(function(img) {
+                img.src = 'imagens/sprites/Avery/avery1.png';
+            });
+            document.querySelector('#p2 p').innerText = "Hello. My name is Avery.";
+            document.querySelector('#p2 #spritestudent').src = "imagens/sprites/Avery/avery3.png";
+            document.querySelector('#p3 p').innerText = "I'm here to be your partner during the quiz.";
+            document.querySelector('#p3 #spritestudent').src = "imagens/sprites/Avery/avery8.png";
+            document.querySelector('#p4 p').innerText = "I hope we can work well together.";
+            document.querySelector('#p4 #spritestudent').src = "imagens/sprites/Avery/avery6.png";
+            document.querySelector('#p5 p').innerText = "The math questions will be easy for me.";
+            document.querySelector('#p5 #spritestudent').src = "imagens/sprites/Avery/avery4.png";
+            document.querySelector('#p7 p').innerText = "You see, Avery's best subject is Math.";
+            document.querySelector('#p8 #spritestudent').src = "imagens/sprites/Avery/avery2.png";
+            document.querySelector('#p9 p').innerText = "I enjoy the logic and problem-solving in math.";
+            document.querySelector('#p9 #spritestudent').src = "imagens/sprites/Avery/avery8.png";
+            document.querySelector('#p10 p').innerText = "Finding solutions to problems makes me feel happy.";
+            document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Avery/avery6.png";
+            document.querySelector('#p15 p').innerText = "If I'm honest, I'm terrible at Natural Science.";
+            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Avery/avery7.png";
+            document.querySelector('#p16 p').innerText = "However, languages is my second best subject.";
+            document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Avery/avery3.png";
+        }
+
+
+
         const dialogo = document.querySelector('.dialogo');
         const buttons = dialogo.querySelectorAll('button');
         const paragraphs = dialogo.querySelectorAll('div[id^="p"]');

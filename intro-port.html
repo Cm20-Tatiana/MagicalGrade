@@ -9,92 +9,86 @@
 </head>
 
 <body>
-   
+
     <div id="container1">
         <div id="bg2"></div>
         <div id="falas">
-            <img class="dialogo_box" src="imagens/dialogue.png">
-             <div  class="dialogo">
-                <button onclick="window.location.href='menu-port.html'" id="skip">Avançar</button>
+            <div  class="dialogo">
+                <img class="dialogo_box" src="imagens/dialogue.png">
+                <button onclick="window.location.href='menu-port.html'"id="skip">Avançar</button>
+                <button id="next1">Próximo</button>
                 <div id="p1">
-                    <img src="imagens/sprites/delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
                     <p>Hoje é o teu primeiro dia de aulas, certo?</p>
                 </div>
-                <button id="next1">Próximo</button>
                 <div id="p2">
-                    <img src="imagens/sprites/delilah/deli2.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli2.png" class="spritedeli" alt="">
                     <p>Não te preocupes, eu vou ser a tua orientadora!</p>
                 </div>
-                <button id="next2">Próximo</button>
                 <div id="p3">
-                    <img src="imagens/sprites/delilah/deli3.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli3.png" class="spritedeli" alt="">
                     <p>O meu nome é Delilah, e sou uma professora nesta escola.</p>
                 </div>
-                <button id="next3">Próximo</button>
                 <div id="p4">
-                    <img src="imagens/sprites/delilah/deli4.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli4.png" class="spritedeli" alt="">
                     <p>Primeiro de tudo, deves começar por aprender!</p>
                 </div>
-                <button id="next4">Próximo</button>
                 <div id="p5">
-                    <img src="imagens/sprites/delilah/deli5.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli5.png" class="spritedeli" alt="">
                     <p>Podes escolher uma disciplina e jogar o seu minijogo.</p>
                 </div>
-                <button id="next5">Próximo</button>
                 <div id="p6">
-                    <img src="imagens/sprites/delilah/deli6.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli6.png" class="spritedeli" alt="">
                     <p>Depois de terminar todos os minijogos, é hora do quiz!</p>
                 </div>
-                <button id="next6">Próximo</button>
                 <div id="p7">
-                    <img src="imagens/sprites/delilah/deli7.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli7.png" class="spritedeli" alt="">
                     <p>O quiz conterá perguntas sobre tudo o que aprendeste.</p>
                 </div>
-                <button id="next7">Próximo</button>
                 <div id="p8">
-                    <img src="imagens/sprites/delilah/deli5.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli5.png" class="spritedeli" alt="">
                     <p>Para o quiz, podes escolher um colega para te ajudar.</p>
                 </div>
-                <button id="next8">Próximo</button>
                 <div id="p9">
-                    <img src="imagens/sprites/delilah/deli2.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Delilah/deli2.png" class="spritedeli" alt="">
                     <p>Chega de conversa! Está na hora de começar a aprender...</p>
                 </div>
-                <button id="nextlast">Next</button>
             </div>
         </div>
     </div>
-    <script>
 
-        const dialogo = document.querySelector('.dialogo');
-        const buttons = dialogo.querySelectorAll('button');
-        const paragraphs = dialogo.querySelectorAll('div[id^="p"]');
-        
-        let currentParagraph = 0;
-        
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                paragraphs[currentParagraph].style.display = 'none';
-                currentParagraph++;
-        
-                if (currentParagraph >= paragraphs.length) {
-                    window.location.replace('menu-port.html');
-                    return;
-                }
-        
-                paragraphs[currentParagraph].style.display = 'block';
-            });
+        <script>
+
+    const dialogo = document.querySelector('.dialogo');
+    const buttons = dialogo.querySelectorAll('button');
+    const paragraphs = dialogo.querySelectorAll('div[id^="p"]');
+
+    let currentParagraph = 0;
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            paragraphs[currentParagraph].style.display = 'none';
+            currentParagraph++;
+
+            if (currentParagraph >= paragraphs.length) {
+                window.location.replace('menu-eng.html');
+                return;
+            }
+
+            paragraphs[currentParagraph].style.display = 'block';
         });
-        
-        paragraphs[currentParagraph].style.display = 'block';
-        
-        function showIt() {
-            document.getElementById("falas").style.display = "block";
-        }
-        setTimeout("showIt()", 1200); 
+    });
+
+    paragraphs[currentParagraph].style.display = 'block';
+
+    function showIt() {
+        document.getElementById("falas").style.display = "block";
+    }
+    setTimeout("showIt()", 1200); 
+
+
     </script>
-        
-        
+
 
 </body>
 </html>
