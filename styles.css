@@ -518,8 +518,8 @@ input[type=checkbox]:checked ~ #menu {
 
 
 #paleta{
-  width: 390px;
-  height: 390px;
+  width: auto;
+  height: 60vh;
   position: absolute;
 }
 
