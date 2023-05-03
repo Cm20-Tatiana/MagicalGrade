@@ -502,11 +502,12 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 
-#parent{
+#parent {
   position: relative;
   display: inline-block;
-  left: 800px;
-  top: 120px;
+  left: 65%;
+  top: 20%;
+  transform: translate(-65%, -20%);
 }
 
 
