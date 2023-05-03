@@ -529,8 +529,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  top: 53px;
-  left: 105px;
+  top: 50px;
+  left: 113px;
 }
 
 #checkbox2{
@@ -539,7 +539,7 @@ input[type=checkbox]:checked ~ #menu {
   height: 40px;
   cursor: pointer;
   top: 52px;
-  left: 173px;
+  left: 178px;
 }
 
 #checkbox3{
