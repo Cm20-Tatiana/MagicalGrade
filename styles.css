@@ -250,7 +250,7 @@ input[type=checkbox]:checked ~ #menu {
   position: absolute;
   right: 220px;
   z-index: 1;
-  width: 25%;
+  height: 75vh;
   bottom: 13%;
 }
 
