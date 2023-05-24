@@ -236,9 +236,9 @@ input[type=checkbox]:checked ~ #menu {
   position: absolute;
   left: 220px;
   z-index: 1;
-  height: 90vh;
+  height: 85vh;
   width:auto;
-  bottom: 5vh;
+  bottom: 13vh;
 }
 
 .spritedeli, .spritestudent {
@@ -250,8 +250,8 @@ input[type=checkbox]:checked ~ #menu {
   position: absolute;
   right: 220px;
   z-index: 1;
-  height: 75vh;
-  bottom: 13%;
+  height: 85vh;
+  bottom: 13vh;
 }
 
 
@@ -361,7 +361,7 @@ input[type=checkbox]:checked ~ #menu {
   z-index: 120;
 }
 
-.button-group #quiz {
+.button-group #quizbutton button {
   margin-top: 20px;
 }
 
@@ -538,8 +538,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  top: 52px;
-  left: 178px;
+  top: 48px;
+  left: 186px;
 }
 
 #checkbox3{
@@ -763,7 +763,7 @@ bottom: 20px;
 
 .flags {
   position: absolute;
-  bottom: 14%;
+  bottom: 22%;
   right: 18%;
   display: flex;
 }
@@ -839,8 +839,8 @@ bottom: 20px;
   position:absolute;
   display: flex;
   flex-direction: column;
-  right: 20%;
-  top: 22%; 
+  right: 10%;
+  top: 22%;
 }
 
 .buttons2 {
@@ -921,24 +921,32 @@ bottom: 20px;
   transform: translate(-50%, -50%);
 }
 
+.containerart button {
+  cursor: pointer;
+  background-image: url('imagens/textura.png');
+  background-size: cover;
+  color: white;
+  width: 30%;
+  height: 10%;
+  border: none;
+  border-radius: 10px;
+  font-weight: 400;
+  z-index: 120;
+  font-size: 1.4vw;
+  padding: 10px;
+}
+
 .containerart * {
   margin: 20px;
 }
 
-.quizbutton {
-  font-size: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #64334c;
-  color: #FFFFFF;
-  cursor: pointer;
-}
-
-#container4 {
+#container4, #quiz {
   display:none
 }
 
 .students p span {
   color: #64334c;
 }
+
+
+

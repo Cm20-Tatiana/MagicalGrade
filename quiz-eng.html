@@ -50,8 +50,8 @@
                 <p>Natural Science: <span>★</span></p>
             </div>
             <div class="student5">
-                <img src="imagens/choosestudent.png" alt="">
-                <button id="student_choose5">Flyn</button>
+                <img src="imagens/choosestudent5.png" alt="">
+                <button onclick="Flyn(); intro();" id="student_choose5">Flyn</button>
                 <p>History: <span>★★★★★</span></p>
                 <p>Natural Science: <span>★★★★</span></p>
                 <p>Art: <span>★★★</span></p>
@@ -68,7 +68,7 @@
         <div id="falas">
             <div  class="dialogo">
                 <img class="dialogo_box" src="imagens/dialogue.png">
-                <button id="skip">Skip</button>
+                <button id="skip" onclick="Skip();">Skip</button>
                 <button id="next1">Next</button>
                 <div id="p1">
                     <img src="imagens/sprites/Delilah/deli6.png" class="spritedeli" alt="">
@@ -164,6 +164,17 @@
         </div>
     </div>
 
+    <div id="quiz">
+		<div id="bg8"></div>
+		<div class="containerart">
+			<h1>Art</h1>
+			<h3>1. What are the primary colors?</h1>
+			<button class="quizbutton" id="option1" onclick="checkAnswer(1)">Red, Green and Blue</button>
+			<button class="quizbutton" id="option2" onclick="checkAnswer(2)">Blue, Yellow and Red</button>
+			<button class="quizbutton" id="option3" onclick="checkAnswer(3)">Purple, Green and Blue</button>
+		</div>
+	</div>
+
     
     <script>
 
@@ -192,10 +203,10 @@
             document.querySelector('#p9 #spritestudent').src = "imagens/sprites/Ellie/ellie5.png";
             document.querySelector('#p10 p').innerText = "People from different countries and cultures!";
             document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Ellie/ellie7.png";
-            document.querySelector('#p15 p').innerText = "Yeah... I know nothing about history.";
-            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Milly/milly4.png";
-            document.querySelector('#p16 p').innerText = "However, I also think math is a lot of fun!";
-            document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Milly/milly5.png";
+            document.querySelector('#p15 p').innerText = "Yeah... I understand nothing of math.";
+            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Ellie/ellie8.png";
+            document.querySelector('#p16 p').innerText = "But I love drawing as well!";
+            document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Ellie/ellie3.png";
         }
 
         function Milly() {
@@ -205,7 +216,7 @@
             });
             document.querySelector('#p2 p').innerText = "Hi! My name is Milly.";
             document.querySelector('#p2 #spritestudent').src = "imagens/sprites/Milly/milly3.png";
-            document.querySelector('#p3 p').innerText = "I'm not sure how much of a help i will be...";
+            document.querySelector('#p3 p').innerText = "I'm not sure how much of a help I will be...";
             document.querySelector('#p3 #spritestudent').src = "imagens/sprites/Milly/milly4.png";
             document.querySelector('#p4 p').innerText = "But I will try my best!";
             document.querySelector('#p4 #spritestudent').src = "imagens/sprites/Milly/milly8.png";
@@ -219,7 +230,7 @@
             document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Milly/milly2.png";
             document.querySelector('#p15 p').innerText = "Yeah... I know nothing about history.";
             document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Milly/milly4.png";
-            document.querySelector('#p16 p').innerText = "However, math is also a lot of fun!";
+            document.querySelector('#p16 p').innerText = "However, I also think math is a lot of fun!!";
             document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Milly/milly5.png";
         }
         
@@ -248,6 +259,31 @@
             document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Avery/avery3.png";
         }
 
+        function Flyn() {
+            document.querySelector('#p1 p').innerText = "Your partner for the quiz will be Flyn!";
+            document.querySelectorAll('#p1 #spritestudent,#p6 #spritestudent,#p7 #spritestudent, #p8 #spritestudent, #p12 #spritestudent, #p13 #spritestudent, #p14 #spritestudent, #p17 #spritestudent, #p18 #spritestudent, #p19 #spritestudent').forEach(function(img) {
+                img.src = 'imagens/sprites/Flyn/flyn1.png';
+            });
+            document.querySelector('#p2 p').innerText = "Hello! My name is Flyn and I will be your partner.";
+            document.querySelector('#p2 #spritestudent').src = "imagens/sprites/Flyn/flyn5.png";
+            document.querySelector('#p3 p').innerText = "I can't wait to start the quiz. I'm so excited!";
+            document.querySelector('#p3 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+            document.querySelector('#p4 p').innerText = "I'm sure we will have fun, specially with history.";
+            document.querySelector('#p4 #spritestudent').src = "imagens/sprites/Flyn/flyn6.png";
+            document.querySelector('#p5 p').innerText = "I know a lot about history!";
+            document.querySelector('#p5 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+            document.querySelector('#p7 p').innerText = "You see, Flyn's best subject is History.";
+            document.querySelector('#p8 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+            document.querySelector('#p9 p').innerText = "Learning about how past events shaped the present...";
+            document.querySelector('#p9 #spritestudent').src = "imagens/sprites/Flyn/flyn4.png";
+            document.querySelector('#p10 p').innerText = "That's so interesting!";
+            document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+            document.querySelector('#p15 p').innerText = "Well... I'm terrible with languages.";
+            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Flyn/flyn7.png";
+            document.querySelector('#p16 p').innerText = "But I also think Natural Sciences is cool!";
+            document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+        }
+
 
 
         const dialogo = document.querySelector('.dialogo');
@@ -261,7 +297,12 @@
             paragraphs[currentParagraph].style.display = 'none';
             currentParagraph++;
             if (currentParagraph >= paragraphs.length) {
-            dialogo.style.display = 'none';
+            function Skip() {
+            const div3 = document.querySelector('#container4');
+            const div4 = document.querySelector('#quiz');
+            div3.style.display = 'none';
+            div4.style.display = 'block';
+        }
             } else {
             paragraphs[currentParagraph].style.display = 'block';
             }
@@ -275,6 +316,248 @@
             document.getElementById("falas").style.display = "block";
         }
         setTimeout("showIt()", 1200); 
+
+        function Skip() {
+            const div3 = document.querySelector('#container4');
+            const div4 = document.querySelector('#quiz');
+            div3.style.display = 'none';
+            div4.style.display = 'block';
+        }
+
+        var questionNumber = 1;
+		var correctAnswer = 2;
+
+		function checkAnswer(selectedOption) {
+			if (selectedOption === correctAnswer) {
+				alert("Correct!");
+			} else {
+				alert("Wrong answer, try again!");
+				return;
+			}
+
+			// Change the question and options
+			switch (questionNumber) {
+				case 1:
+					document.querySelector("h3").innerHTML = "2. What are the secondary colors?";
+					document.querySelector("#option1").innerHTML = "Orange, Green and Purple";
+					document.querySelector("#option2").innerHTML = "Yellow, Blue and Green";
+					document.querySelector("#option3").innerHTML = "Purple, Orange and White";
+					correctAnswer = 1;
+					questionNumber++;
+					break;
+				case 2:
+					document.querySelector("h3").innerHTML = "3. What color is the result of mixing blue and yellow?";
+					document.querySelector("#option1").innerHTML = "Cyan";
+					document.querySelector("#option2").innerHTML = "Purple";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 3;
+					questionNumber++;
+					break;
+				case 3:
+					document.querySelector("h3").innerHTML = "4. What color is the result of mixing blue and red?";
+					document.querySelector("#option1").innerHTML = "Purple";
+					document.querySelector("#option2").innerHTML = "Orange";
+					document.querySelector("#option3").innerHTML = "Green";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 4:
+				document.querySelector("h3").innerHTML = "5. What color is the result of mixing black and white?";
+					document.querySelector("#option1").innerHTML = "Gray";
+					document.querySelector("#option2").innerHTML = "Yellow";
+					document.querySelector("#option3").innerHTML = "Black";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 5:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "6. What is the result of 5+7?" ;
+					document.querySelector("#option1").innerHTML = "10";
+					document.querySelector("#option2").innerHTML = "12";
+					document.querySelector("#option3").innerHTML = "3";
+					correctAnswer = 2;
+					questionNumber++;
+				break;
+				case 6:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "7. What is the result of 13-5?" ;
+					document.querySelector("#option1").innerHTML = "8";
+					document.querySelector("#option2").innerHTML = "6";
+					document.querySelector("#option3").innerHTML = "10";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 7:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "8. What is the result of 18+9?";
+					document.querySelector("#option1").innerHTML = "25";
+					document.querySelector("#option2").innerHTML = "27";
+					document.querySelector("#option3").innerHTML = "26";
+					correctAnswer = 2;
+					questionNumber++;
+				break;
+				case 8:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "9. What is the result of 3x3?";
+					document.querySelector("#option1").innerHTML = "6";
+					document.querySelector("#option2").innerHTML = "7";
+					document.querySelector("#option3").innerHTML = "9";
+					correctAnswer = 3;
+					questionNumber++;
+				break;
+				case 9:
+					document.querySelector("h1").innerHTML = "Math";
+					document.querySelector("h3").innerHTML = "10. What is the result of 40:4?";
+					document.querySelector("#option1").innerHTML = "10";
+					document.querySelector("#option2").innerHTML = "20";
+					document.querySelector("#option3").innerHTML = "8";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 10:
+					document.querySelector("h1").innerHTML = "Natural Science";
+					document.querySelector("h3").innerHTML = "11. How would you classify frogs based on their alimentation?";
+					document.querySelector("#option1").innerHTML = "Insectivore";
+					document.querySelector("#option2").innerHTML = "Carnivore";
+					document.querySelector("#option3").innerHTML = "Herbivore";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 11:
+					document.querySelector("h1").innerHTML = "Natural Science";
+					document.querySelector("h3").innerHTML = "12. How would you classify chickens based on their alimentation?";
+					document.querySelector("#option1").innerHTML = "Carnivore";
+					document.querySelector("#option2").innerHTML = "Garnivore";
+					document.querySelector("#option3").innerHTML = "Omnivore";
+					correctAnswer = 2;
+					questionNumber++;
+				break;
+				case 12:
+					document.querySelector("h1").innerHTML = "Natural Science";
+					document.querySelector("h3").innerHTML = "13. An omnivore is an organism that eats...";
+					document.querySelector("#option1").innerHTML = "both plants and animals";
+					document.querySelector("#option2").innerHTML = "insects";
+					document.querySelector("#option3").innerHTML = "grains";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 13:
+					document.querySelector("h1").innerHTML = "Natural Science";
+					document.querySelector("h3").innerHTML = "14. Which one of this animals is a carnivore?";
+					document.querySelector("#option1").innerHTML = "Chicken";
+					document.querySelector("#option2").innerHTML = "Bear";
+					document.querySelector("#option3").innerHTML = "Lion";
+					correctAnswer = 3;
+					questionNumber++;
+				break;
+				case 14:
+					document.querySelector("h1").innerHTML = "Natural Science";
+					document.querySelector("h3").innerHTML = "15. Which one of this animals is a herbivore?";
+					document.querySelector("#option1").innerHTML = "Cow";
+					document.querySelector("#option2").innerHTML = "Fox";
+					document.querySelector("#option3").innerHTML = "Fish";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 15:
+					document.querySelector("h1").innerHTML = "Languages";
+					document.querySelector("h3").innerHTML = "16. How do you say 'yellow' in italian?";
+					document.querySelector("#option1").innerHTML = "Gelb";
+					document.querySelector("#option2").innerHTML = "Amarilla";
+					document.querySelector("#option3").innerHTML = "Giallo";
+					correctAnswer = 3;
+					questionNumber++;
+				break;
+				case 16:
+					document.querySelector("h1").innerHTML = "Languages";
+					document.querySelector("h3").innerHTML = "17. How do you say 'rabbit' in french?";
+					document.querySelector("#option1").innerHTML = "Coelho";
+					document.querySelector("#option2").innerHTML = "Lapin";
+					document.querySelector("#option3").innerHTML = "Coniglietto";
+					correctAnswer = 2;
+					questionNumber++;
+				break;
+				case 17:
+					document.querySelector("h1").innerHTML = "Languages";
+					document.querySelector("h3").innerHTML = "18. How do you say 'Hello' in italian?";
+					document.querySelector("#option1").innerHTML = "Ciao";
+					document.querySelector("#option2").innerHTML = "Hola";
+					document.querySelector("#option3").innerHTML = "Hallo";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 18:
+					document.querySelector("h1").innerHTML = "Languages";
+					document.querySelector("h3").innerHTML = "19. What does 'bailar' mean in spanish?";
+					document.querySelector("#option1").innerHTML = "Baking";
+					document.querySelector("#option2").innerHTML =  "Dancing";
+					document.querySelector("#option3").innerHTML = "Walking";
+					correctAnswer = 2;
+					questionNumber++;
+				break;
+				case 19:
+					document.querySelector("h1").innerHTML = "Languages";
+					document.querySelector("h3").innerHTML = "20. What does 'Lieblingstier' mean in german?";
+					document.querySelector("#option1").innerHTML = "Favorite color";
+					document.querySelector("#option2").innerHTML = "Your age";
+					document.querySelector("#option3").innerHTML = "Favorite animal";
+					correctAnswer = 3;
+					questionNumber++;
+				break;
+				case 20:
+					document.querySelector("h1").innerHTML = "History";
+					document.querySelector("h3").innerHTML = "21. Who was Plato's teacher?";
+					document.querySelector("#option1").innerHTML = "Aristoteles";
+					document.querySelector("#option2").innerHTML = "Confucius";
+					document.querySelector("#option3").innerHTML = "Socrates";
+					correctAnswer = 3;
+					questionNumber++;
+				break;
+				case 21:
+					document.querySelector("h1").innerHTML = "History";
+					document.querySelector("h3").innerHTML = "22. Which one of these is a Leonardo da Vinci's painting?";
+					document.querySelector("#option1").innerHTML = "Mona Lisa";
+					document.querySelector("#option2").innerHTML = "Starry Night";
+					document.querySelector("#option3").innerHTML = "The Persistence of Memory";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 22:
+					document.querySelector("h1").innerHTML = "History";
+					document.querySelector("h3").innerHTML = "23. For which building was Louis XIV responsible?";
+					document.querySelector("#option1").innerHTML = "Eiffel Tower";
+					document.querySelector("#option2").innerHTML = "Palace of Versailles";
+					document.querySelector("#option3").innerHTML = "Notre-Dame Cathedral";
+					correctAnswer = 2;
+					questionNumber++;
+				break;
+				case 23:
+					document.querySelector("h1").innerHTML = "History";
+					document.querySelector("h3").innerHTML = "24. What themes did Frida Kahlo Explore in her pieces?";
+					document.querySelector("#option1").innerHTML = "Feminism and Mexican Culture";
+					document.querySelector("#option2").innerHTML = "Politics and Economics";
+					document.querySelector("#option3").innerHTML = "Joy and Happiness";
+					correctAnswer = 1;
+					questionNumber++;
+				break;
+				case 24:
+					document.querySelector("h1").innerHTML = "History";
+					document.querySelector("h3").innerHTML = "25. What was Martin Luther King's philosophy?";
+					document.querySelector("#option1").innerHTML = "Isolationalism";
+					document.querySelector("#option2").innerHTML = "Violent Protest";
+					document.querySelector("#option3").innerHTML = "Nonviolent Resistance";
+					correctAnswer = 3;
+					questionNumber++;
+				break;
+				default:
+					document.querySelector("h1").innerHTML = "Congratulations!";
+					document.querySelector("h3").innerHTML = "Quiz complete!";
+					document.querySelector("#option1").style.display = "none";
+					document.querySelector("#option2").style.display = "none";
+					document.querySelector("#option3").style.display = "none";
+					break;
+			}
+		}
 
 </script>        
 

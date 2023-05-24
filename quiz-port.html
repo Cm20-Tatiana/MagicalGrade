@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div id="container3">
+        <div id="bg2_1"></div>
+        <div class="students">
+            <div class="student1">
+                <img src="imagens/choosestudent1.png" alt="">
+                <button onclick="intro();" id="student_choose1">Sylvan</button>
+                <p>Ciências Naturais: <span>★★★★★</span></p>
+                <p>História: <span>★★★★</span></p>
+                <p>Matemática: <span>★★★</span></p>
+                <p>Línguas: <span>★★</span></p>
+                <p>Arte: <span>★</span></p>
+            </div>
+            <div class="student2">
+                <img src="imagens/choosestudent2.png" alt="">
+                <button onclick="Ellie(); intro();" id="student_choose2">Ellie</button>
+                <p>Línguas: <span>★★★★★</span></p>
+                <p>Arte: <span>★★★★</span></p>
+                <p>Ciências Naturais: <span>★★★</span></p>
+                <p>História: <span>★★</span></p>
+                <p>Matemática: <span>★</span></p>
+            </div>
+            <div class="student3">
+                <img src="imagens/choosestudent3.png" alt="">
+                <button onclick="Milly(); intro();" id="student_choose3">Milly</button>
+                <p>Arte: <span>★★★★★</span></p>
+                <p>Matemática: <span>★★★★</span></p>
+                <p>Línguas: <span>★★★</span></p>
+                <p>Ciências Naturais: <span>★★</span></p>
+                <p>História: <span>★</span></p>
+            </div>
+            <div class="student4">
+                <img src="imagens/choosestudent4.png" alt="">
+                <button onclick="Avery(); intro();" id="student_choose4">Avery</button>
+                <p>Matemática: <span>★★★★★</span></p>
+                <p>Línguas: <span>★★★★</span></p>
+                <p>História: <span>★★★</span></p>
+                <p>Arte: <span>★★</span></p>
+                <p>Ciências Naturais: <span>★</span></p>
+            </div>
+            <div class="student5">
+                <img src="imagens/choosestudent5.png" alt="">
+                <button onclick="Flyn(); intro();" id="student_choose5">Flyn</button>
+                <p>História: <span>★★★★★</span></p>
+                <p>Ciências Naturais: <span>★★★★</span></p>
+                <p>Arte: <span>★★★</span></p>
+                <p>Matemática: <span>★★</span></p>
+                <p>Línguas: <span>★</span></p>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div id="container4">
+        <div id="bg2"></div>
+        <div id="falas">
+            <div  class="dialogo">
+                <img class="dialogo_box" src="imagens/dialogue.png">
+                <button id="skip" onclick="Skip();">Skip</button>
+                <button id="next1">Next</button>
+                <div id="p1">
+                    <img src="imagens/sprites/Delilah/deli6.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>O teu parceiro para o quiz será o Sylvan!</p>
+                </div>
+                <div id="p2">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan9.png" id="spritestudent" alt="">
+                    <p>Olá! O meu nome é Sylvan, prazer em conhecer-te.</p>
+                </div>
+                <div id="p3">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan4.png" id="spritestudent" alt="">
+                    <p>Espero poder ajudar-te neste quiz.</p>
+                </div>
+                <div id="p4">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan6.png" id="spritestudent" alt="">
+                    <p>Estou um pouco nervoso...</p>
+                </div>
+                <div id="p5">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan2.png" id="spritestudent" alt="">
+                    <p>Mas acredito que posso ajudar nas perguntas de Ciências Naturais!</p>
+                </div>
+                <div id="p6">
+                    <img src="imagens/sprites/Delilah/deli3.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Estou certa disso!</p>
+                </div>
+                <div id="p7">
+                    <img src="imagens/sprites/Delilah/deli2.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Vês, a melhor disciplina do Sylvan é Ciências Naturais.</p>
+                </div>
+                <div id="p8">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan9.png" id="spritestudent" alt="">
+                    <p>É a minha disciplina favorita!</p>
+                </div>
+                <div id="p9">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan5.png" id="spritestudent" alt="">
+                    <p>O mundo natural é tão interessante...</p>
+                </div>
+                <div id="p10">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan4.png" id="spritestudent" alt="">
+                    <p>Eu poderia falar sobre plantas e animais por horas!</p>
+                </div>
+                <div id="p12">
+                    <img src="imagens/sprites/Delilah/deli3.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Vejo que vocês já estão se a conhecer!</p>
+                </div>
+                <div id="p13">
+                    <img src="imagens/sprites/Delilah/deli4.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Para o quiz, consider as notas do seu parceiro.</p>
+                </div>
+                <div id="p14">
+                    <img src="imagens/sprites/Delilah/deli3.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Cada aluno tem matérias em que são melhores ou piores.</p>
+                </div>
+                <div id="p15">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan8.png" id="spritestudent" alt="">
+                    <p>Sim... Infelizmente, não sei muito sobre artes.</p>
+                </div>
+                <div id="p16">
+                    <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan5.png" id="spritestudent" alt="">
+                    <p>Mas também acho história fascinante!</p>
+                </div>
+                <div id="p17">
+                    <img src="imagens/sprites/Delilah/deli7.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Se tiveres alguma dúvida, pede ajuda ao teu parceiro.</p>
+                </div>
+                <div id="p18">
+                    <img src="imagens/sprites/Delilah/deli6.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Eu também estarei lá para explicar como fazer o quiz.</p>
+                </div>
+                <div id="p19">
+                    <img src="imagens/sprites/Delilah/deli2.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" id="spritestudent" alt="">
+                    <p>Agora vamos começar!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz">
+        <div id="bg8"></div>
+        <div class="containerart">
+            <h1>Arte</h1>
+            <h3>1. Quais são as cores primárias?</h1>
+            <button class="quizbutton" id="option1" onclick="checkAnswer(1)">Vermelho, Verde e Azul</button>
+            <button class="quizbutton" id="option2" onclick="checkAnswer(2)">Azul, Amarelo e Vermelho</button>
+            <button class="quizbutton" id="option3" onclick="checkAnswer(3)">Roxo, Verde e Azul</button>
+        </div>
+    </div>
+    
+
+    
+    <script>
+
+        function intro() {
+            const div1 = document.querySelector('#container3');
+            const div2 = document.querySelector('#container4');
+            div1.style.display = 'none';
+            div2.style.display = 'block';
+        }
+        function Ellie() {
+            document.querySelector('#p1 p').innerText = "A tua parceira para o quiz será a Ellie!";
+            document.querySelectorAll('#p1 #spritestudent,#p6 #spritestudent,#p7 #spritestudent, #p8 #spritestudent, #p12 #spritestudent, #p13 #spritestudent, #p14 #spritestudent, #p17 #spritestudent, #p18 #spritestudent, #p19 #spritestudent').forEach(function(img) {
+            img.src = 'imagens/sprites/Ellie/ellie1.png';
+            });
+            document.querySelector('#p2 p').innerText = "Olá! Eu sou a Ellie. Vamos mesmo ser parceiros?";
+            document.querySelector('#p2 #spritestudent').src = "imagens/sprites/Ellie/ellie7.png";
+            document.querySelector('#p3 p').innerText = "Tenho a certeza de que iremos trabalhar muito bem juntos.";
+            document.querySelector('#p3 #spritestudent').src = "imagens/sprites/Ellie/ellie5.png";
+            document.querySelector('#p4 p').innerText = "Tenho um talento natural para línguas.";
+            document.querySelector('#p4 #spritestudent').src = "imagens/sprites/Ellie/ellie6.png";
+            document.querySelector('#p5 p').innerText = "Essas perguntas serão fáceis!";
+            document.querySelector('#p5 #spritestudent').src = "imagens/sprites/Ellie/ellie2.png";
+            document.querySelector('#p7 p').innerText = "A melhor disciplina da Ellie é Línguas.";
+            document.querySelector('#p8 #spritestudent').src = "imagens/sprites/Ellie/ellie2.png";
+            document.querySelector('#p9 p').innerText = "É tão fixe poder falar com pessoas diferentes.";
+            document.querySelector('#p9 #spritestudent').src = "imagens/sprites/Ellie/ellie5.png";
+            document.querySelector('#p10 p').innerText = "Pessoas de diferentes países e culturas!";
+            document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Ellie/ellie7.png";
+            document.querySelector('#p15 p').innerText = "Sim... Eu não entendo nada de matemática.";
+            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Ellie/ellie8.png";
+            document.querySelector('#p16 p').innerText = "Mas eu também adoro desenhar!";
+            document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Ellie/ellie3.png";
+        }
+
+        function Milly() {
+            document.querySelector('#p1 p').innerText = "A tua parceira para o quiz será a Milly!";
+            document.querySelectorAll('#p1 #spritestudent,#p6 #spritestudent,#p7 #spritestudent, #p8 #spritestudent, #p12 #spritestudent, #p13 #spritestudent, #p14 #spritestudent, #p17 #spritestudent, #p18 #spritestudent, #p19 #spritestudent').forEach(function(img) {
+            img.src = 'imagens/sprites/Milly/milly1.png';
+            });
+            document.querySelector('#p2 p').innerText = "Olá! Chamo-me Milly.";
+            document.querySelector('#p2 #spritestudent').src = "imagens/sprites/Milly/milly3.png";
+            document.querySelector('#p3 p').innerText = "Não tenho a certeza de quanto vou ajudar...";
+            document.querySelector('#p3 #spritestudent').src = "imagens/sprites/Milly/milly4.png";
+            document.querySelector('#p4 p').innerText = "Mas vou dar o meu melhor!";
+            document.querySelector('#p4 #spritestudent').src = "imagens/sprites/Milly/milly8.png";
+            document.querySelector('#p5 p').innerText = "Pelo menos, espero ser útil nas perguntas de arte.";
+            document.querySelector('#p5 #spritestudent').src = "imagens/sprites/Milly/milly3.png";
+            document.querySelector('#p7 p').innerText = "A melhor disciplina da Milly é Arte.";
+            document.querySelector('#p8 #spritestudent').src = "imagens/sprites/Milly/milly8.png";
+            document.querySelector('#p9 p').innerText = "Adoro criar coisas novas e artísticas!";
+            document.querySelector('#p9 #spritestudent').src = "imagens/sprites/Milly/milly3.png";
+            document.querySelector('#p10 p').innerText = "Pintar ajuda-me a expressar-me!";
+            document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Milly/milly2.png";
+            document.querySelector('#p15 p').innerText = "Sim... Não percebo nada de história.";
+            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Milly/milly4.png";
+            document.querySelector('#p16 p').innerText = "No entanto, também acho que a matemática é divertida!!";
+            document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Milly/milly5.png";
+        }   
+
+        function Avery() {
+            document.querySelector('#p1 p').innerText = "A tua parceira para o quiz será o Avery!";
+            document.querySelectorAll('#p1 #spritestudent,#p6 #spritestudent,#p7 #spritestudent, #p8 #spritestudent, #p12 #spritestudent, #p13 #spritestudent, #p14 #spritestudent, #p17 #spritestudent, #p18 #spritestudent, #p19 #spritestudent').forEach(function(img) {
+            img.src = 'imagens/sprites/Avery/avery1.png';
+            });
+            document.querySelector('#p2 p').innerText = "Olá, o meu nome é Avery.";
+            document.querySelector('#p2 #spritestudent').src = "imagens/sprites/Avery/avery3.png";
+            document.querySelector('#p3 p').innerText = "Estou aqui para ser a tua parceira durante o quiz.";
+            document.querySelector('#p3 #spritestudent').src = "imagens/sprites/Avery/avery8.png";
+            document.querySelector('#p4 p').innerText = "Espero que possamos trabalhar bem juntos.";
+            document.querySelector('#p4 #spritestudent').src = "imagens/sprites/Avery/avery6.png";
+            document.querySelector('#p5 p').innerText = "As questões de matemática serão fáceis para mim.";
+            document.querySelector('#p5 #spritestudent').src = "imagens/sprites/Avery/avery4.png";
+            document.querySelector('#p7 p').innerText = "A melhor disciplina do Avery é Matemática.";
+            document.querySelector('#p8 #spritestudent').src = "imagens/sprites/Avery/avery2.png";
+            document.querySelector('#p9 p').innerText = "Eu gosto da lógica e da resolução de problemas na matemática.";
+            document.querySelector('#p9 #spritestudent').src = "imagens/sprites/Avery/avery8.png";
+            document.querySelector('#p10 p').innerText = "Encontrar soluções para problemas faz-me sentir feliz.";
+            document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Avery/avery6.png";
+            document.querySelector('#p15 p').innerText = "Sendo honesta, sou péssima em Ciências Naturais.";
+            document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Avery/avery7.png";
+            document.querySelector('#p16 p').innerText = "No entanto, Línguas é a minha segunda melhor matéria.";
+            document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Avery/avery3.png";
+            }
+
+            function Flyn() {
+                document.querySelector('#p1 p').innerText = "O teu parceiro para o quiz será o Flyn!";
+                document.querySelectorAll('#p1 #spritestudent,#p6 #spritestudent,#p7 #spritestudent, #p8 #spritestudent, #p12 #spritestudent, #p13 #spritestudent, #p14 #spritestudent, #p17 #spritestudent, #p18 #spritestudent, #p19 #spritestudent').forEach(function(img) {
+                img.src = 'imagens/sprites/Flyn/flyn1.png';
+                });
+                document.querySelector('#p2 p').innerText = "Olá! O meu nome é Flyn e serei o teu parceiro.";
+                document.querySelector('#p2 #spritestudent').src = "imagens/sprites/Flyn/flyn5.png";
+                document.querySelector('#p3 p').innerText = "Estou muito entusiasmado para começar o quiz!";
+                document.querySelector('#p3 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+                document.querySelector('#p4 p').innerText = "Estou certo que vai ser divertido, especialmente com história.";
+                document.querySelector('#p4 #spritestudent').src = "imagens/sprites/Flyn/flyn6.png";
+                document.querySelector('#p5 p').innerText = "Eu sei muito sobre história!";
+                document.querySelector('#p5 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+                document.querySelector('#p7 p').innerText = "Vês, a melhor disciplina do Flyn é história.";
+                document.querySelector('#p8 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+                document.querySelector('#p9 p').innerText = "Aprender como eventos passados moldaram o presente...";
+                document.querySelector('#p9 #spritestudent').src = "imagens/sprites/Flyn/flyn4.png";
+                document.querySelector('#p10 p').innerText = "Isso é tão interessante!";
+                document.querySelector('#p10 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+                document.querySelector('#p15 p').innerText = "Bem... sou péssimo(a) em línguas.";
+                document.querySelector('#p15 #spritestudent').src = "imagens/sprites/Flyn/flyn7.png";
+                document.querySelector('#p16 p').innerText = "Mas também acho Ciências Naturais incrível!";
+                document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
+            }
+
+
+
+        const dialogo = document.querySelector('.dialogo');
+        const buttons = dialogo.querySelectorAll('button');
+        const paragraphs = dialogo.querySelectorAll('div[id^="p"]');
+        
+        let currentParagraph = 0;
+        
+        buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            paragraphs[currentParagraph].style.display = 'none';
+            currentParagraph++;
+            if (currentParagraph >= paragraphs.length) {
+            function Skip() {
+            const div3 = document.querySelector('#container4');
+            const div4 = document.querySelector('#quiz');
+            div3.style.display = 'none';
+            div4.style.display = 'block';
+        }
+            } else {
+            paragraphs[currentParagraph].style.display = 'block';
+            }
+        });
+        });
+
+        
+        paragraphs[currentParagraph].style.display = 'block';
+        
+        function showIt() {
+            document.getElementById("falas").style.display = "block";
+        }
+        setTimeout("showIt()", 1200); 
+
+        function Skip() {
+            const div3 = document.querySelector('#container4');
+            const div4 = document.querySelector('#quiz');
+            div3.style.display = 'none';
+            div4.style.display = 'block';
+        }
+
+        var questionNumber = 1;
+		var correctAnswer = 2;
+
+		function checkAnswer(selectedOption) {
+			if (selectedOption === correctAnswer) {
+				alert("Correto!");
+			} else {
+				alert("Resposta errada, tenta novamente!");
+				return;
+			}
+
+			// Change the question and options
+			switch (questionNumber) {
+                case 1:
+				document.querySelector("h3").innerHTML = "2. Quais são as cores secundárias?";
+				document.querySelector("#option1").innerHTML = "Laranja, Verde e Roxo";
+				document.querySelector("#option2").innerHTML = "Amarelo, Azul e Verde";
+				document.querySelector("#option3").innerHTML = "Roxo, Laranja e Branco";
+				correctAnswer = 1;
+				questionNumber++;
+				break;
+			case 2:
+				document.querySelector("h3").innerHTML = "3. Qual é a cor resultante da mistura de azul e amarelo?";
+				document.querySelector("#option1").innerHTML = "Ciano";
+				document.querySelector("#option2").innerHTML = "Roxo";
+				document.querySelector("#option3").innerHTML = "Verde";
+				correctAnswer = 3;
+				questionNumber++;
+				break;
+			case 3:
+				document.querySelector("h3").innerHTML = "4. Qual é a cor resultante da mistura de azul e vermelho?";
+				document.querySelector("#option1").innerHTML = "Roxo";
+				document.querySelector("#option2").innerHTML = "Laranja";
+				document.querySelector("#option3").innerHTML = "Verde";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 4:
+			document.querySelector("h3").innerHTML = "5. Qual é a cor resultante da mistura de preto e branco?";
+				document.querySelector("#option1").innerHTML = "Cinza";
+				document.querySelector("#option2").innerHTML = "Amarelo";
+				document.querySelector("#option3").innerHTML = "Preto";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 5:
+				document.querySelector("h1").innerHTML = "Matemática";
+				document.querySelector("h3").innerHTML = "6. Qual é o resultado de 5+7?" ;
+				document.querySelector("#option1").innerHTML = "10";
+				document.querySelector("#option2").innerHTML = "12";
+				document.querySelector("#option3").innerHTML = "3";
+				correctAnswer = 2;
+				questionNumber++;
+			break;
+			case 6:
+				document.querySelector("h1").innerHTML = "Matemática";
+				document.querySelector("h3").innerHTML = "7. Qual é o resultado de 13-5?" ;
+				document.querySelector("#option1").innerHTML = "8";
+				document.querySelector("#option2").innerHTML = "6";
+				document.querySelector("#option3").innerHTML = "10";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 7:
+				document.querySelector("h1").innerHTML = "Matemática";
+				document.querySelector("h3").innerHTML = "8. Qual é o resultado de 18+9?";
+				document.querySelector("#option1").innerHTML = "25";
+				document.querySelector("#option2").innerHTML = "27";
+				document.querySelector("#option3").innerHTML = "26";
+				correctAnswer = 2;
+				questionNumber++;
+			break;
+			case 8:
+				document.querySelector("h1").innerHTML = "Matemática";
+				document.querySelector("h3").innerHTML = "9. Qual é o resultado de 3x3?";
+				document.querySelector("#option1").innerHTML = "6";
+				document.querySelector("#option2").innerHTML = "7";
+				document.querySelector("#option3").innerHTML = "9";
+				correctAnswer = 3;
+				questionNumber++;
+			break;
+			case 9:
+				document.querySelector("h1").innerHTML = "Matemática";
+				document.querySelector("h3").innerHTML = "10. Qual é o resultado de 40:4?";
+				document.querySelector("#option1").innerHTML = "10";
+				document.querySelector("#option2").innerHTML = "20";
+				document.querySelector("#option3").innerHTML = "8";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 10:
+				document.querySelector("h1").innerHTML = "Ciências Naturais";
+				document.querySelector("h3").innerHTML = "11. Como classificarias os sapos com base na sua alimentação?";
+				document.querySelector("#option1").innerHTML = "Insectívoro";
+				document.querySelector("#option2").innerHTML = "Carnívoro";
+				document.querySelector("#option3").innerHTML = "Herbívoro";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 11:
+				document.querySelector("h1").innerHTML = "Ciências Naturais";
+				document.querySelector("h3").innerHTML = "12. Como classificarias as galinhas com base na sua alimentação?";
+				document.querySelector("#option1").innerHTML = "Carnívoro";
+				document.querySelector("#option2").innerHTML = "Garnívoro";
+				document.querySelector("#option3").innerHTML = "Omnívoro";
+				correctAnswer = 2;
+				questionNumber++;
+			break;
+			case 12:
+				document.querySelector("h1").innerHTML = "Ciências Naturais";
+				document.querySelector("h3").innerHTML = "13. Um omnívoro é um organismo que come...";
+				document.querySelector("#option1").innerHTML = "tanto plantas como animais";
+				document.querySelector("#option2").innerHTML = "insetos";
+				document.querySelector("#option3").innerHTML = "grãos";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 13:
+				document.querySelector("h1").innerHTML = "Ciências Naturais";
+				document.querySelector("h3").innerHTML = "14. Qual destes animais é um carnívoro?";
+				document.querySelector("#option1").innerHTML = "Galinha";
+				document.querySelector("#option2").innerHTML = "Urso";
+				document.querySelector("#option3").innerHTML = "Leão";
+				correctAnswer = 3;
+				questionNumber++;
+			break;
+			case 14:
+				document.querySelector("h1").innerHTML = "Ciências Naturais";
+				document.querySelector("h3").innerHTML = "15. Qual destes animais é um herbívoro?";
+				document.querySelector("#option1").innerHTML = "Vaca";
+				document.querySelector("#option2").innerHTML = "Raposa";
+				document.querySelector("#option3").innerHTML = "Peixe";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 15:
+				document.querySelector("h1").innerHTML = "Línguas";
+				document.querySelector("h3").innerHTML = "16. Como se diz 'amarelo' em italiano?";
+				document.querySelector("#option1").innerHTML = "Gelb";
+				document.querySelector("#option2").innerHTML = "Amarilla";
+				document.querySelector("#option3").innerHTML = "Giallo";
+				correctAnswer = 3;
+				questionNumber++;
+			break;
+            case 16:
+				document.querySelector("h1").innerHTML = "Línguas";
+				document.querySelector("h3").innerHTML = "17. Como se diz 'coelho' em francês?";
+				document.querySelector("#option1").innerHTML = "Coelho";
+				document.querySelector("#option2").innerHTML = "Lapin";
+				document.querySelector("#option3").innerHTML = "Coniglietto";
+				correctAnswer = 2;
+				questionNumber++;
+			break;
+			case 17:
+				document.querySelector("h1").innerHTML = "Línguas";
+				document.querySelector("h3").innerHTML = "18. Como se diz 'olá' em italiano?";
+				document.querySelector("#option1").innerHTML = "Ciao";
+				document.querySelector("#option2").innerHTML = "Hola";
+				document.querySelector("#option3").innerHTML = "Hallo";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 18:
+				document.querySelector("h1").innerHTML = "Línguas";
+				document.querySelector("h3").innerHTML = "19. O que significa 'bailar' em espanhol?";
+				document.querySelector("#option1").innerHTML = "Cozinhar";
+				document.querySelector("#option2").innerHTML =  "Dançar";
+				document.querySelector("#option3").innerHTML = "Caminhar";
+				correctAnswer = 2;
+				questionNumber++;
+			break;
+			case 19:
+				document.querySelector("h1").innerHTML = "Línguas";
+				document.querySelector("h3").innerHTML = "20. O que significa 'Lieblingstier' em alemão?";
+				document.querySelector("#option1").innerHTML = "Cor favorita";
+				document.querySelector("#option2").innerHTML = "Sua idade";
+				document.querySelector("#option3").innerHTML = "Animal favorito";
+				correctAnswer = 3;
+				questionNumber++;
+			break;
+			case 20:
+				document.querySelector("h1").innerHTML = "História";
+				document.querySelector("h3").innerHTML = "21. Quem foi o professor de Platão?";
+				document.querySelector("#option1").innerHTML = "Aristóteles";
+				document.querySelector("#option2").innerHTML = "Confúcio";
+				document.querySelector("#option3").innerHTML = "Sócrates";
+				correctAnswer = 3;
+				questionNumber++;
+			break;
+			case 21:
+				document.querySelector("h1").innerHTML = "História";
+				document.querySelector("h3").innerHTML = "22. Qual destas é uma pintura de Leonardo da Vinci?";
+				document.querySelector("#option1").innerHTML = "Mona Lisa";
+				document.querySelector("#option2").innerHTML = "Noite Estrelada";
+				document.querySelector("#option3").innerHTML = "A Persistência da Memória";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 22:
+				document.querySelector("h1").innerHTML = "História";
+				document.querySelector("h3").innerHTML = "23. Por qual edifício foi responsável Luís XIV?";
+				document.querySelector("#option1").innerHTML = "Torre Eiffel";
+				document.querySelector("#option2").innerHTML = "Palácio de Versalhes";
+				document.querySelector("#option3").innerHTML = "Catedral de Notre-Dame";
+				correctAnswer = 2;
+				questionNumber++;
+			break;
+			case 23:
+				document.querySelector("h1").innerHTML = "História";
+				document.querySelector("h3").innerHTML = "24. Quais temas Frida Kahlo explorou em suas obras?";
+				document.querySelector("#option1").innerHTML = "Feminismo e Cultura Mexicana";
+				document.querySelector("#option2").innerHTML = "Política e Economia";
+				document.querySelector("#option3").innerHTML = "Alegria e Felicidade";
+				correctAnswer = 1;
+				questionNumber++;
+			break;
+			case 24:
+				document.querySelector("h1").innerHTML = "História";
+				document.querySelector("h3").innerHTML = "25. Qual era a filosofia de Martin Luther King?";
+				document.querySelector("#option1").innerHTML = "Isolacionismo";
+				document.querySelector("#option2").innerHTML = "Protesto Violento";
+				document.querySelector("#option3").innerHTML = "Resistência Não Violenta";
+				correctAnswer = 3;
+				questionNumber++;
+			break;
+				default:
+					document.querySelector("h1").innerHTML = "Parabéns!";
+					document.querySelector("h3").innerHTML = "Quiz completo!";
+					document.querySelector("#option1").style.display = "none";
+					document.querySelector("#option2").style.display = "none";
+					document.querySelector("#option3").style.display = "none";
+					break;
+			}
+		}
+
+</script>        
+
+</body>
+</html>

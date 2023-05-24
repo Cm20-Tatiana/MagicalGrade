@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Background Image</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<div id="bg3">
+    <button onclick="window.location.href='menu-port.html'"id="back">Voltar</button>
+    <div id="bg3_1"></div>
+  </div>
+
+  <div id="parent">
+    <img id="paleta" src="imagens/minigame/paleta.png" alt="">
+    <div id="checkbox">
+      <input type="checkbox" id="checkbox1">
+      <input type="checkbox" id="checkbox2">
+            <input type="checkbox" id="checkbox3">
+      <input type="checkbox" id="checkbox4">
+            <input type="checkbox" id="checkbox5">
+      <input type="checkbox" id="checkbox6">
+            <input type="checkbox" id="checkbox7">
+      <input type="checkbox" id="checkbox8">
+  </div>
+
+    <script>
+      
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const fullscreenDiv = document.getElementById('bg3');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', updateBackgroundImage);
+  });
+
+  function updateBackgroundImage() {
+    const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+    if (checkedCount > 2) {
+      alert("Please select only two checkboxes.");
+      this.checked = false;
+      return;
+    }
+
+    switch (checkedCount) {
+      case 1:
+        if (checkboxes[0].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg1.jpg')";
+        } else if (checkboxes[1].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg2.jpg')";
+        } else if (checkboxes[2].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg3.jpg')";
+        } else if (checkboxes[3].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg4.jpg')";
+        } else if (checkboxes[4].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg5.jpg')";
+        } else if (checkboxes[5].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg6.jpg')";
+        } else if (checkboxes[6].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg7.jpg')";
+        } else if (checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg8.jpg')";
+        }
+        break;
+      case 2:
+        if (checkboxes[0].checked && checkboxes[1].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg6.jpg')";
+        } else if (checkboxes[0].checked && checkboxes[3].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg9.jpg')";
+        } else if (checkboxes[0].checked && checkboxes[4].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg10.jpg')";
+        } else if (checkboxes[0].checked && checkboxes[5].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg11.jpg')";
+        } else if (checkboxes[0].checked && checkboxes[2].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg5.jpg')";
+        } else if (checkboxes[1].checked && checkboxes[2].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg4.jpg')";
+        } else if (checkboxes[0].checked && checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg12.jpg')";
+        } else if (checkboxes[0].checked && checkboxes[6].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg13.jpg')";
+        } else if (checkboxes[1].checked && checkboxes[3].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg14.jpg')";
+        } else if (checkboxes[1].checked && checkboxes[4].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg15.jpg')";
+        } else if (checkboxes[1].checked && checkboxes[5].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg16.jpg')";
+        } else if (checkboxes[1].checked && checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg17.jpg')";
+        } else if (checkboxes[1].checked && checkboxes[6].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg18.jpg')";
+        } else if (checkboxes[2].checked && checkboxes[3].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg19.jpg')";
+        } else if (checkboxes[2].checked && checkboxes[4].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg20.jpg')";
+        } else if (checkboxes[2].checked && checkboxes[5].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg21.jpg')";
+        } else if (checkboxes[2].checked && checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg22.jpg')";
+        } else if (checkboxes[2].checked && checkboxes[6].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg23.jpg')";
+        } else if (checkboxes[3].checked && checkboxes[4].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg24.jpg')";
+        } else if (checkboxes[3].checked && checkboxes[5].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg25.jpg')";
+        } else if (checkboxes[3].checked && checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg26.jpg')";
+        } else if (checkboxes[6].checked && checkboxes[3].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg27.jpg')";
+        } else if (checkboxes[4].checked && checkboxes[5].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg28.jpg')";
+        } else if (checkboxes[4].checked && checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg29.jpg')";
+        } else if (checkboxes[4].checked && checkboxes[6].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg30.jpg')";
+        } else if (checkboxes[5].checked && checkboxes[6].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg31.jpg')";
+        } else if (checkboxes[5].checked && checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg32.jpg')";
+        } else if (checkboxes[6].checked && checkboxes[7].checked) {
+          fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg33.jpg')";
+        }
+        break;
+      default:
+        fullscreenDiv.style.backgroundImage = "url('imagens/minigame/mg0.jpg')";
+    }
+  }
+
+
+    </script>
+
+    
+</body>
+</html>
