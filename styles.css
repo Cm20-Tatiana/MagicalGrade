@@ -589,7 +589,7 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 30vh;
+  top: 3vh;
   left: 31.5vh;
 }
 
@@ -793,7 +793,7 @@ bottom: 20px;
 }
 
 .image-container img {
-  width: 270px;
+  width: 43vh;
 }
 
 .speech-bubble, .speech-bubble2 {
