@@ -526,8 +526,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 50px;
-  left: 113px;
+  top: 7vh;
+  left: 18vh;
 }
 
 #checkbox2{
@@ -535,8 +535,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 48px;
-  left: 186px;
+  top: 7vh;
+  left: 30vh;
 }
 
 #checkbox3{
@@ -544,8 +544,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 80px;
-  left: 248px;
+  top: 12vh;
+  left: 43vh;
 }
 
 #checkbox4{
@@ -553,8 +553,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 152px;
-  left: 283px;
+  top: 23vh;
+  left: 49vh;
 }
 
 #checkbox5{
@@ -562,8 +562,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 232px;
-  left: 271px;
+  top: 35.5vh;
+  left: 47vh;
 }
 
 #checkbox6{
@@ -571,8 +571,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 280px;
-  left: 192px;
+  top: 43vh;
+  left: 33vh;
 }
 
 #checkbox7{
@@ -580,8 +580,8 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 117px;
-  left: 179px;
+  top: 17.5vh;
+  left: 31vh;
 }
 
 #checkbox8{
@@ -589,13 +589,13 @@ input[type=checkbox]:checked ~ #menu {
   width: 7vh;
   height: 7vh;
   cursor: pointer;
-  top: 200px;
-  left: 181px;
+  top: 30vh;
+  left: 31.5vh;
 }
 
 
 #checkbox input[type="checkbox"] {
-  opacity: 0;
+  opacity: 1;
 }
 #checkbox input[type="checkbox"]:checked {
   opacity: 1;
