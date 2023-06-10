@@ -648,19 +648,19 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 #plate1, #pizza1 {
-  right: 75vh;
+  right: 70vh;
 }
 
 #plate2, #pizza2 {
-  right: 25vh;
+  right: 20vh;
 }
 
 #plate3, #pizza3 {
-  right: 75vh;
+  right: 70vh;
 }
 
 #plate4, #pizza4 {
-  right: 25vh;
+  right: 20vh;
 }
 
 
