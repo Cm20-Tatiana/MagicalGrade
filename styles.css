@@ -601,6 +601,13 @@ input[type=checkbox]:checked ~ #menu {
   opacity: 1;
 }
 
+.papel {
+  position: absolute;
+  top: 15vh;
+  left: 8vh;
+  width: 70vh;
+}
+
 #calculadora {
   position: absolute;
   z-index: 30;
