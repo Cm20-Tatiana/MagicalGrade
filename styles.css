@@ -603,16 +603,18 @@ input[type=checkbox]:checked ~ #menu {
 
 .papel {
   position: absolute;
-  top: 15%;
-  left: 5%;
-  width: 34%;
+  left: 1%;
+  width: 28%;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 
 #calculadora {
   position: absolute;
   z-index: 30;
   top: 30vh;
-  left: 17vh;
+  left: 5%;
 }
 
 #calculadora input, #calculadora button, #calculadora select{
