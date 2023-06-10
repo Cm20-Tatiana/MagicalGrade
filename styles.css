@@ -252,7 +252,7 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 
-#back {
+#back, #student {
   cursor: pointer;
   background-image: url('imagens/textura.png');
   background-size: cover;
@@ -264,12 +264,20 @@ input[type=checkbox]:checked ~ #menu {
   font-weight: 400;
   z-index: 120;
   position: absolute;
-  top: 2%;
-  left: 1%;
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 
-.dialogo p {
+#back {
+  top: 2%;
+  left: 1%;
+}
+
+#student {
+  bottom: 2%;
+  right: 1%;
+}
+
+.dialogo p, .dialogo2 p {
   position: absolute;
   left: 23%;
   bottom: 10%;
@@ -283,7 +291,7 @@ input[type=checkbox]:checked ~ #menu {
   animation: type 3.5s steps(60, end);
 }
 
-.dialogo button {
+.dialogo button, .dialogo2 button {
   cursor: pointer;
   background-image: url('imagens/textura.png');
   background-size: cover;
@@ -299,12 +307,16 @@ input[type=checkbox]:checked ~ #menu {
   font-size: 1.4vw;
 }
 
-.dialogo button:hover {
+.dialogo button:hover, .dialogo2 button:hover {
   opacity: 90%;
 }
 
+.dialogo2 {
+  display: none;
+}
 
-.dialogo button:not(#skip) {
+
+.dialogo button:not(#skip), .dialogo2 button:not(#skip) {
   left: 70%;
 }
 
@@ -312,7 +324,7 @@ input[type=checkbox]:checked ~ #menu {
   left: 62%;
 }
 
-.dialogo > div:not(#p1) {
+.dialogo > div:not(#p1), .dialogo2 > div:not(#p1) {
   display: none;
 }
 
@@ -648,19 +660,19 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 #plate1, #pizza1 {
-  right: 33%;
+  left: 152vh;
 }
 
 #plate2, #pizza2 {
-  right: 10%;
+  left: 103vh;
 }
 
 #plate3, #pizza3 {
-  right: 33%;
+  left: 152vh;
 }
 
 #plate4, #pizza4 {
-  right: 10%;
+  left: 103vh;
 }
 
 

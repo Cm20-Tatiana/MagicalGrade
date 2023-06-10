@@ -12,6 +12,7 @@
 
     <div id="container3">
         <div id="bg2_1"></div>
+        <button onclick="window.location.href='menu-eng.html'"id="back">Voltar</button>
         <div class="students">
             <div class="student1">
                 <img src="imagens/choosestudent1.png" alt="">
@@ -65,6 +66,7 @@
     
     <div id="container4">
         <div id="bg2"></div>
+        <button onclick="window.location.href='menu-eng.html'"id="back">Voltar</button>
         <div id="falas">
             <div  class="dialogo">
                 <img class="dialogo_box" src="imagens/dialogue.png">
@@ -166,6 +168,9 @@
 
     <div id="quiz">
         <div id="bg8"></div>
+        <button onclick="window.location.href='menu-eng.html'"id="back">Voltar</button>
+        <button onclick="student()"id="student">Ajuda-me</button>
+
         <div class="containerart">
             <h1>Arte</h1>
             <h3>1. Quais são as cores primárias?</h1>
@@ -174,16 +179,25 @@
             <button class="quizbutton" id="option3" onclick="checkAnswer(3)">Roxo, Verde e Azul</button>
         </div>
         <div id="falas">
-            <div  class="dialogo">
+            <div  class="dialogo2">
                 <img class="dialogo_box" src="imagens/dialogue.png">
                 <button id="skip" onclick="Skip();">Avançar</button>
                 <button id="next1">Próximo</button>
                 <div id="p1">
                     <img src="imagens/sprites/Delilah/deli6.png" class="spritedeli" alt="">
                     <img src="imagens/sprites/Sylvan/sylvan1.png" class="spritestudent" alt="">
-                    <p>kkk!</p>
+                    <p>No quiz, tens uma pergunta e 3 opções de respostas.</p>
                 </div>
-                
+                <div id="p2">
+                    <img src="imagens/sprites/Delilah/deli6.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" class="spritestudent" alt="">
+                    <p>Apenas uma opção está correta!</p>
+                </div>
+                <div id="p3">
+                    <img src="imagens/sprites/Delilah/deli6.png" class="spritedeli" alt="">
+                    <img src="imagens/sprites/Sylvan/sylvan1.png" class="spritestudent" alt="">
+                    <p>Boa sorte! Estou certa que és capaz.</p>
+                </div>
             <div>
     </div>
     
@@ -297,32 +311,53 @@
                 document.querySelector('#p16 #spritestudent').src = "imagens/sprites/Flyn/flyn2.png";
             }
 
+            const dialogo = document.querySelector('.dialogo');
+const dialogo2 = document.querySelector('.dialogo2');
+const buttons = dialogo.querySelectorAll('button');
+const buttons2 = dialogo2.querySelectorAll('button');
+const paragraphs = dialogo.querySelectorAll('div[id^="p"]');
+const paragraphs2 = document.querySelectorAll('.dialogo2 > div[id^="p"]');
 
+let currentParagraph1 = 0; 
 
-        const dialogo = document.querySelector('.dialogo');
-        const buttons = dialogo.querySelectorAll('button');
-        const paragraphs = dialogo.querySelectorAll('div[id^="p"]');
-        
-        let currentParagraph = 0;
-        
-        buttons.forEach(button => {
+buttons.forEach(button => {
   button.addEventListener('click', () => {
-    paragraphs[currentParagraph].style.display = 'none';
-    currentParagraph++;
+    paragraphs[currentParagraph1].style.display = 'none';
+    currentParagraph1++;
 
-    if (currentParagraph >= paragraphs.length) {
+    if (currentParagraph1 >= paragraphs.length) {
       const div3 = document.querySelector('#container4');
       const div4 = document.querySelector('#quiz');
       div3.style.display = 'none';
       div4.style.display = 'block';
+      currentParagraph1 = 0;
     } else {
-      paragraphs[currentParagraph].style.display = 'block';
+      paragraphs[currentParagraph1].style.display = 'block';
     }
   });
 });
 
-       
-        paragraphs[currentParagraph].style.display = 'block';
+function student() {
+    dialogo2.style.display = 'block';
+    let currentParagraph2 = 0; 
+    buttons2.forEach(button => {
+    button.addEventListener('click', () => {
+        paragraphs2[currentParagraph2].style.display = 'none';
+        currentParagraph2++;
+
+        if (currentParagraph2 >= paragraphs2.length) {
+        dialogo2.style.display = 'none';
+        } else {
+        paragraphs2[currentParagraph2].style.display = 'block';
+        }
+    });
+    });
+
+    paragraphs[currentParagraph1].style.display = 'block';
+    paragraphs2[currentParagraph2].style.display = 'block';
+}
+
+
         
         function showIt() {
             document.getElementById("falas").style.display = "block";
