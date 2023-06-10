@@ -603,9 +603,9 @@ input[type=checkbox]:checked ~ #menu {
 
 .papel {
   position: absolute;
-  top: 15vh;
-  left: 8vh;
-  width: 70vh;
+  top: 15%;
+  left: 5%;
+  width: 34%;
 }
 
 #calculadora {
