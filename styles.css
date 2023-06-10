@@ -637,13 +637,13 @@ input[type=checkbox]:checked ~ #menu {
 #plate1, #plate2, #pizza1, #pizza2 {
   top: 5%;
   position: absolute;
-  width: 21%;
+  width: 45vh;
 }
 
 #plate3, #plate4, #pizza3, #pizza4 {
   bottom: 5%;
   position: absolute;
-  width: 21%;
+  width: 45vh;
 
 }
 
