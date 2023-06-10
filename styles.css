@@ -607,6 +607,7 @@ input[type=checkbox]:checked ~ #menu {
   top: 160px;
   left: 115px;
 }
+
 #plates {
   z-index: 30;
 }
@@ -621,38 +622,39 @@ input[type=checkbox]:checked ~ #menu {
 
 
 #plate1, #plate2, #pizza1, #pizza2 {
-  top: 25px;
+  top: 5vh;
   position: absolute;
   width: 21%;
 }
 
 #plate3, #plate4, #pizza3, #pizza4 {
-  bottom: 25px;
+  bottom: 5vh;
   position: absolute;
   width: 21%;
 
 }
 
 #plate1, #pizza1 {
-  left: 540px;
+  right: 75vh;
 }
 
 #plate2, #pizza2 {
-  left: 850px;
+  right: 25vh;
 }
 
 #plate3, #pizza3 {
-  left: 540px;
+  right: 75vh;
 }
 
 #plate4, #pizza4 {
-  left: 850px;
+  right: 25vh;
 }
+
 
 
 #animals {
   position: absolute;
-  top: 45px;
+  top: 8vh;
   z-index: 100;
   width: 20%;
   left: 0;
@@ -734,8 +736,8 @@ bottom: 20px;
   border-left: none;
   background-color: transparent;
   position: absolute;
-  top: 200px;
-  left: 280px;
+  top: 33vh;
+  left: 45vh;
 }
 
 #buttonright {
