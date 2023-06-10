@@ -604,8 +604,12 @@ input[type=checkbox]:checked ~ #menu {
 #calculadora {
   position: absolute;
   z-index: 30;
-  top: 160px;
-  left: 115px;
+  top: 30vh;
+  left: 17vh;
+}
+
+#calculadora input, #calculadora button, #calculadora select{
+  font-size: 17px;
 }
 
 #plates {
