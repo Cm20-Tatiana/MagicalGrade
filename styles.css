@@ -231,7 +231,7 @@ input[type=checkbox]:checked ~ #menu {
 
 .spritedeli {
   position: absolute;
-  left: 220px;
+  left: 40vh;
   z-index: 1;
   height: 85vh;
   width:auto;
@@ -256,7 +256,7 @@ input[type=checkbox]:checked ~ #menu {
 }
 .spritestudent {
   position: absolute;
-  right: 220px;
+  right: 40vh;
   z-index: 1;
   height: 85vh;
   bottom: 13vh;
@@ -731,7 +731,7 @@ input[type=checkbox]:checked ~ #menu {
   cursor: pointer;
   right: 0;
   text-align: center;
-  width: 100px;
+  width: 15vh;
 }
 
 
@@ -757,12 +757,16 @@ input[type=checkbox]:checked ~ #menu {
   height: 50%;
   padding: 35px;
   color: white;
+  font-size: 1.5vw;
 }
 
 #close-btn {
   position: absolute;
   top: 0;
   right: 0;
+  width: 4vh;
+  height: 4vh;
+  font-size: 1.4vw;
 }
 
 
@@ -770,6 +774,7 @@ input[type=checkbox]:checked ~ #menu {
 #aliments {
 position: absolute;
 bottom: 20px;
+min-width: 20vh;
 }
 #aliments img {
   width: 50%;
