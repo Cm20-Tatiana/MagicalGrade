@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div id="bg8"></div>
+    <button onclick="window.location.href='quiz-port.html'"id="back">Volta</button>
+    <button onclick="student()"id="student">Ajuda-me</button>
+    <div>
+        <img src="imagens/sprites/Delilah/deli1.png" class="spritedeli2" id="spriteteacher" alt="">
+        <img src="imagens/sprites/Milly/milly1.png" class="spritestudent2" id="spritestudent" alt="">
+        <div id="falas">
+            <div class="dialogo2">
+                <img class="dialogo_box" src="imagens/dialogue.png">
+                <button id="next1">Next</button>
+                <div id="p1">
+                    <img src="imagens/sprites/Milly/milly2.png" class="spritestudent2" alt="">
+                    <p>As cores primárias são azul, amarelo e vermelho.</p>
+                </div>
+                <div id="p2">
+                    <img src="imagens/sprites/Milly/milly3.png" class="spritestudent2" alt="">
+                    <p>As cores secundárias são laranja, verde e roxo.</p>
+                </div>
+                <div id="p3">
+                    <img src="imagens/sprites/Milly/milly8.png" class="spritestudent2" alt="">
+                    <p>Misturar azul e amarelo resulta em verde.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="containerart">
+        <h1>Arte</h1>
+        <h3>1. Quais são as cores primárias?</h1>
+        <button class="quizbutton" id="option1" onclick="checkAnswer(1)">Vermelho, Verde e Azul</button>
+        <button class="quizbutton" id="option2" onclick="checkAnswer(2)">Azul, Amarelo e Vermelho</button>
+        <button class="quizbutton" id="option3" onclick="checkAnswer(3)">Roxo, Verde e Azul</button>
+    </div>
+    
+    <script>
+const dialogo2 = document.querySelector('.dialogo2');
+const buttons2 = dialogo2.querySelectorAll('button');
+const paragraphs2 = document.querySelectorAll('.dialogo2 > div[id^="p"]');
+let currentParagraph2 = 0;
+
+function student() {
+  dialogo2.style.display = 'block';
+  currentParagraph2 = 0;
+  spritestudent.style.display = 'none';
+  buttons2.forEach((button) => {
+    button.removeEventListener('click', handleClick); 
+    button.addEventListener('click', handleClick); 
+  });
+  paragraphs2[currentParagraph2].style.display = 'block';
+}
+
+function handleClick() {
+  paragraphs2[currentParagraph2].style.display = 'none';
+  currentParagraph2++;
+  if (currentParagraph2 >= paragraphs2.length) {
+    dialogo2.style.display = 'none';
+    spritestudent.style.display = 'block';
+  } else {
+    paragraphs2[currentParagraph2].style.display = 'block';
+  }
+}
+
+
+
+paragraphs2[currentParagraph2].style.display = 'block';
+
+var questionNumber = 1;
+var correctAnswer = 2;
+
+function checkAnswer(selectedOption) {
+  if (selectedOption === correctAnswer) {
+    alert('Correct!');
+  } else {
+    alert('Wrong answer, try again!');
+    return;
+  }
+
+            switch (questionNumber) {
+                case 1:
+                    document.querySelector('h3').innerHTML = '2. Quais são as cores secundárias?';
+                    document.querySelector('#option1').innerHTML = 'Laranja, Verde e Roxo';
+                    document.querySelector('#option2').innerHTML = 'Amarelo, Azul e Verde';
+                    document.querySelector('#option3').innerHTML = 'Roxo, Laranja e Branco';
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                case 2:
+                    document.querySelector('h3').innerHTML = '3. Qual é a cor resultante da mistura de azul e amarelo?';
+                    document.querySelector('#option1').innerHTML = 'Ciano';
+                    document.querySelector('#option2').innerHTML = 'Roxo';
+                    document.querySelector('#option3').innerHTML = 'Verde';
+                    correctAnswer = 3;
+                    questionNumber++;
+                    break;
+                case 3:
+                    document.querySelector('h3').innerHTML = '4. Qual é a cor resultante da mistura de azul e vermelho?';
+                    document.querySelector('#option1').innerHTML = 'Roxo';
+                    document.querySelector('#option2').innerHTML = 'Laranja';
+                    document.querySelector('#option3').innerHTML = 'Verde';
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                case 4:
+                    document.querySelector('h3').innerHTML = '5. Qual é a cor resultante da mistura de preto e branco?';
+                    document.querySelector('#option1').innerHTML = 'Cinzento';
+                    document.querySelector('#option2').innerHTML = 'Amarelo';
+                    document.querySelector('#option3').innerHTML = 'Preto';
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                case 5:
+                    document.querySelector('h1').innerHTML = 'Matemática';
+                    document.querySelector('h3').innerHTML = '6. Qual é o resultado de 5+7?';
+                    document.querySelector('#option1').innerHTML = '10';
+                    document.querySelector('#option2').innerHTML = '12';
+                    document.querySelector('#option3').innerHTML = '3';
+                    document.querySelector('#p1 p').innerText = 'Para 5+7, o resultado é 12.';
+                    document.querySelector('#p2 p').innerText = 'Para 13-5, o resultado é 8.';
+                    document.querySelector('#p3 p').innerText = 'Quando você tem 3x3, você precisa fazer 3+3+3=9.';
+                    document.querySelector('#p1 .spritestudent2').src = 'imagens/sprites/Milly/milly2.png';
+                    document.querySelector('#p2 .spritestudent2').src = 'imagens/sprites/Milly/milly3.png';
+                    document.querySelector('#p3 .spritestudent2').src = 'imagens/sprites/Milly/milly9.png';
+                    correctAnswer = 2;
+                    questionNumber++;
+                    break;
+                    case 6:
+                    document.querySelector('h1').innerHTML = 'Matemática';
+                    document.querySelector('h3').innerHTML = '7. Qual é o resultado de 13-5?';
+                    document.querySelector('#option1').innerHTML = '8';
+                    document.querySelector('#option2').innerHTML = '6';
+                    document.querySelector('#option3').innerHTML = '10';
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                case 7:
+                    document.querySelector('h1').innerHTML = 'Matemática';
+                    document.querySelector('h3').innerHTML = '8. Qual é o resultado de 18+9?';
+                    document.querySelector('#option1').innerHTML = '25';
+                    document.querySelector('#option2').innerHTML = '27';
+                    document.querySelector('#option3').innerHTML = '26';
+                    correctAnswer = 2;
+                    questionNumber++;
+                    break;
+                case 8:
+                    document.querySelector('h1').innerHTML = 'Matemática';
+                    document.querySelector('h3').innerHTML = '9. Qual é o resultado de 3x3?';
+                    document.querySelector('#option1').innerHTML = '6';
+                    document.querySelector('#option2').innerHTML = '7';
+                    document.querySelector('#option3').innerHTML = '9';
+                    correctAnswer = 3;
+                    questionNumber++;
+                    break;
+                case 9:
+                    document.querySelector('h1').innerHTML = 'Matemática';
+                    document.querySelector('h3').innerHTML = '10. Qual é o resultado de 40:4?';
+                    document.querySelector('#option1').innerHTML = '10';
+                    document.querySelector('#option2').innerHTML = '20';
+                    document.querySelector('#option3').innerHTML = '8';
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+				case 10:
+                    document.querySelector('h1').innerHTML = 'Ciências Naturais';
+                    document.querySelector('h3').innerHTML = '11. Como classificarias os sapos com base na sua alimentação?';
+                    document.querySelector('#option1').innerHTML = 'Insetívoro';
+                    document.querySelector('#option2').innerHTML = 'Carnívoro';
+                    document.querySelector('#option3').innerHTML = 'Herbívoro';
+                    document.querySelector('#p1 p').innerText = 'Desculpa... Eu não sou boa em ciências naturais.';
+                    document.querySelector('#p2 p').innerText = 'Eu sei que os sapos comem insetos.';
+                    document.querySelector('#p3 p').innerText = 'Portanto, o sapo é um insetívoro.';
+                    document.querySelector('#p1 .spritestudent2').src = 'imagens/sprites/Milly/milly4.png';
+                    document.querySelector('#p2 .spritestudent2').src = 'imagens/sprites/Milly/milly9.png';
+                    document.querySelector('#p3 .spritestudent2').src = 'imagens/sprites/Milly/milly3.png';
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                    case 11:
+                    document.querySelector('h1').innerHTML = 'Ciências Naturais';
+                    document.querySelector('h3').innerHTML = '12. Como classificarias as galinhas com base na sua alimentação?';
+                    document.querySelector('#option1').innerHTML = 'Carnívoro';
+                    document.querySelector('#option2').innerHTML = 'Garnívoro';
+                    document.querySelector('#option3').innerHTML = 'Onívoro';
+                    correctAnswer = 2;
+                    questionNumber++;
+                    break;
+                case 12:
+                    document.querySelector('h1').innerHTML = 'Ciências Naturais';
+                    document.querySelector('h3').innerHTML = '13. Um omnívoro é um organismo que come...';
+                    document.querySelector('#option1').innerHTML = 'tanto plantas quanto animais';
+                    document.querySelector('#option2').innerHTML = 'insetos';
+                    document.querySelector('#option3').innerHTML = 'grãos';
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                case 13:
+                    document.querySelector('h1').innerHTML = 'Ciências Naturais';
+                    document.querySelector('h3').innerHTML = '14. Qual desses animais é um carnívoro?';
+                    document.querySelector('#option1').innerHTML = 'Galinha';
+                    document.querySelector('#option2').innerHTML = 'Urso';
+                    document.querySelector('#option3').innerHTML = 'Leão';
+                    correctAnswer = 3;
+                    questionNumber++;
+                    break;
+                case 14:
+                    document.querySelector("h1").innerHTML = "Ciências Naturais";
+                    document.querySelector("h3").innerHTML = "15. Qual desses animais é um herbívoro?";
+                    document.querySelector("#option1").innerHTML = "Vaca";
+                    document.querySelector("#option2").innerHTML = "Raposa";
+                    document.querySelector("#option3").innerHTML = "Peixe";
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+				case 15:
+                    document.querySelector('h1').innerHTML = 'Línguas';
+                    document.querySelector('h3').innerHTML = '16. Como se diz "amarelo" em italiano?';
+                    document.querySelector('#option1').innerHTML = 'Gelb';
+                    document.querySelector('#option2').innerHTML = 'Amarilla';
+                    document.querySelector('#option3').innerHTML = 'Giallo';
+                    document.querySelector('#p1 p').innerText = 'Amarelo em italiano é "Giallo".';
+                    document.querySelector('#p2 p').innerText = '"Lapin" é a resposta correta para coelho.';
+                    document.querySelector('#p3 p').innerText = 'Desculpe, só sei isso.';
+                    document.querySelector('#p1 .spritestudent2').src = 'imagens/sprites/Milly/milly3.png';
+                    document.querySelector('#p2 .spritestudent2').src = 'imagens/sprites/Milly/milly9.png';
+                    document.querySelector('#p3 .spritestudent2').src = 'imagens/sprites/Milly/milly4.png';
+                    correctAnswer = 3;
+                    questionNumber++;
+				break;
+                case 16:
+                    document.querySelector("h1").innerHTML = "Línguas";
+                    document.querySelector("h3").innerHTML = "17. Como se diz 'coelho' em francês?";
+                    document.querySelector("#option1").innerHTML = "Coelho";
+                    document.querySelector("#option2").innerHTML = "Lapin";
+                    document.querySelector("#option3").innerHTML = "Coniglietto";
+                    correctAnswer = 2;
+                    questionNumber++;
+                break;
+                case 17:
+                    document.querySelector("h1").innerHTML = "Línguas";
+                    document.querySelector("h3").innerHTML = "18. Como se diz 'olá' em italiano?";
+                    document.querySelector("#option1").innerHTML = "Ciao";
+                    document.querySelector("#option2").innerHTML = "Hola";
+                    document.querySelector("#option3").innerHTML = "Hallo";
+                    correctAnswer = 1;
+                    questionNumber++;
+                break;
+                case 18:
+                    document.querySelector("h1").innerHTML = "Línguas";
+                    document.querySelector("h3").innerHTML = "19. O que significa 'bailar' em espanhol?";
+                    document.querySelector("#option1").innerHTML = "Assar";
+                    document.querySelector("#option2").innerHTML = "Dançar";
+                    document.querySelector("#option3").innerHTML = "Caminhar";
+                    correctAnswer = 2;
+                    questionNumber++;
+                break;
+                case 19:
+                    document.querySelector("h1").innerHTML = "Línguas";
+                    document.querySelector("h3").innerHTML = "20. O que significa 'Lieblingstier' em alemão?";
+                    document.querySelector("#option1").innerHTML = "Cor favorita";
+                    document.querySelector("#option2").innerHTML = "A tua idade";
+                    document.querySelector("#option3").innerHTML = "Animal favorito";
+                    correctAnswer = 3;
+                    questionNumber++;
+                break;
+				case 20:
+                    document.querySelector('h1').innerHTML = 'História';
+                    document.querySelector('h3').innerHTML = '21. Quem foi o professor de Platão?';
+                    document.querySelector('#option1').innerHTML = 'Aristóteles';
+                    document.querySelector('#option2').innerHTML = 'Confúcio';
+                    document.querySelector('#option3').innerHTML = 'Sócrates';
+                    document.querySelector('#p1 p').innerText = 'Sinto muito...';
+                    document.querySelector('#p2 p').innerText = 'Não entendo nada de história.';
+                    document.querySelector('#p3 p').innerText = 'Gostaria de poder ajudar!';
+                    document.querySelector('#p1 .spritestudent2').src = 'imagens/sprites/Milly/milly4.png';
+                    document.querySelector('#p2 .spritestudent2').src = 'imagens/sprites/Milly/milly7.png';
+                    document.querySelector('#p3 .spritestudent2').src = 'imagens/sprites/Milly/milly4.png';
+                    correctAnswer = 3;
+                    questionNumber++;
+				break;
+				case 21:
+                    document.querySelector("h1").innerHTML = "História";
+                    document.querySelector("h3").innerHTML = "22. Qual destas é uma pintura de Leonardo da Vinci?";
+                    document.querySelector("#option1").innerHTML = "Mona Lisa";
+                    document.querySelector("#option2").innerHTML = "Noite Estrelada";
+                    document.querySelector("#option3").innerHTML = "A Persistência da Memória";
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                case 22:
+                    document.querySelector("h1").innerHTML = "História";
+                    document.querySelector("h3").innerHTML = "23. Por qual construção Louis XIV foi responsável?";
+                    document.querySelector("#option1").innerHTML = "Torre Eiffel";
+                    document.querySelector("#option2").innerHTML = "Palácio de Versalhes";
+                    document.querySelector("#option3").innerHTML = "Catedral de Notre-Dame";
+                    correctAnswer = 2;
+                    questionNumber++;
+                    break;
+                case 23:
+                    document.querySelector("h1").innerHTML = "História";
+                    document.querySelector("h3").innerHTML = "24. Quais temas Frida Kahlo explorou em suas obras?";
+                    document.querySelector("#option1").innerHTML = "Feminismo e Cultura Mexicana";
+                    document.querySelector("#option2").innerHTML = "Política e Economia";
+                    document.querySelector("#option3").innerHTML = "Alegria e Felicidade";
+                    correctAnswer = 1;
+                    questionNumber++;
+                    break;
+                case 24:
+                    document.querySelector("h1").innerHTML = "História";
+                    document.querySelector("h3").innerHTML = "25. Qual era a filosofia de Martin Luther King?";
+                    document.querySelector("#option1").innerHTML = "Isolacionismo";
+                    document.querySelector("#option2").innerHTML = "Protesto Violento";
+                    document.querySelector("#option3").innerHTML = "Resistência Não Violenta";
+                    correctAnswer = 3;
+                    questionNumber++;
+                break;
+                default:
+                document.querySelector("h1").innerHTML = "Parabéns!";
+                document.querySelector("h3").innerHTML = "Quiz completo!";
+                document.querySelector("#option1").style.display = "none";
+                document.querySelector("#option2").style.display = "none";
+                document.querySelector("#option3").style.display = "none";
+                document.querySelector('#p1 p').innerText = "Bom trabalho! Tu completaste o quiz!";
+                document.querySelector('#p2 p').innerText = 'Vejo que tu aprendeste muito.';
+                document.querySelector('#p3 p').innerText = "Estou orgulhosa de ti!";
+                document.querySelector('#p1 .spritestudent2').src = "imagens/sprites/Milly/milly5.png";
+				document.querySelector('#p2 .spritestudent2').src = "imagens/sprites/Milly/milly3.png";
+				document.querySelector('#p3 .spritestudent2').src = "imagens/sprites/Milly/milly8.png";
+                break;
+                }
+            }
+
+</script>        
+
+</body>
+</html>

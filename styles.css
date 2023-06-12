@@ -238,11 +238,22 @@ input[type=checkbox]:checked ~ #menu {
   bottom: 13vh;
 }
 
+.spritedeli2 {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  height: 85vh;
+  width:auto;
+  bottom: 0;
+}
+
 .spritedeli, .spritestudent {
   max-height: 100%;
   max-width: 100%;
 }
-
+.containerart {
+  display: block;
+}
 .spritestudent {
   position: absolute;
   right: 220px;
@@ -251,30 +262,48 @@ input[type=checkbox]:checked ~ #menu {
   bottom: 13vh;
 }
 
+.spritestudent2 {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  height: 85vh;
+  bottom: 0;
+}
 
-#back, #student {
+#back, #student, #teacher {
   cursor: pointer;
   background-image: url('imagens/textura.png');
   background-size: cover;
   color: white;
-  width: 10%;
-  height: 8%;
   border: 2px solid #431441;
   border-radius: 10px;
   font-weight: 400;
   z-index: 120;
   position: absolute;
-  font-size: 1.7vw;
 }
 
 #back {
   top: 2%;
   left: 1%;
+  width: 10%;
+  height: 8%;
+  font-size: 1.7vw;
 }
 
 #student {
   bottom: 2%;
-  right: 1%;
+  right: 8.3%;
+  width: 9%;
+  height: 7%;
+  font-size: 1.5vw;
+}
+
+#teacher {
+  bottom: 2%;
+  left: 8.3%;
+  width: 8%;
+  height: 7%;
+  font-size: 1.5vw;
 }
 
 .dialogo p, .dialogo2 p {
@@ -605,7 +634,6 @@ input[type=checkbox]:checked ~ #menu {
   left: 31.3vh;
 }
 
-
 #checkbox input[type="checkbox"] {
   opacity: 0;
 }
@@ -619,12 +647,12 @@ input[type=checkbox]:checked ~ #menu {
   width: 28%;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 45;
 }
-
 
 #calculadora {
   position: absolute;
-  z-index: 30;
+  z-index: 50;
   top: 30vh;
   left: 7%;
 }
@@ -660,22 +688,20 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 #plate1, #pizza1 {
-  right: 20vh;
+  right: 70vh;
 }
 
 #plate2, #pizza2 {
-  right: 70vh;
-}
-
-#plate3, #pizza3 {
   right: 20vh;
 }
 
-#plate4, #pizza4 {
+#plate3, #pizza3 {
   right: 70vh;
 }
 
-
+#plate4, #pizza4 {
+  right: 20vh;
+}
 
 #animals {
   position: absolute;
