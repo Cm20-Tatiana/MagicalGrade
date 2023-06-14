@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Introduction</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -59,32 +59,54 @@
 
         <script>
 
-    const dialogo = document.querySelector('.dialogo');
-    const buttons = dialogo.querySelectorAll('button');
-    const paragraphs = dialogo.querySelectorAll('div[id^="p"]');
+const dialogo = document.querySelector('.dialogo');
+const buttons = dialogo.querySelectorAll('button');
+const paragraphs = dialogo.querySelectorAll('div[id^="p"]');
 
-    let currentParagraph = 0;
+let currentParagraph = 0;
+let currentLetter = 0;
+let intervalId = null;
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            paragraphs[currentParagraph].style.display = 'none';
-            currentParagraph++;
-
-            if (currentParagraph >= paragraphs.length) {
-                window.location.replace('menu-eng.html');
-                return;
-            }
-
-            paragraphs[currentParagraph].style.display = 'block';
-        });
-    });
-
-    paragraphs[currentParagraph].style.display = 'block';
-
-    function showIt() {
-        document.getElementById("falas").style.display = "block";
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    clearInterval(intervalId);
+    paragraphs[currentParagraph].style.display = 'none';
+    currentParagraph++;
+    
+    if (currentParagraph >= paragraphs.length) {
+      window.location.replace('menu-eng.html');
+      return;
     }
-    setTimeout("showIt()", 1200); 
+    
+    currentLetter = 0;
+    paragraphs[currentParagraph].style.display = 'block';
+    startTyping();
+  });
+});
+
+function startTyping() {
+  const paragraph = paragraphs[currentParagraph];
+  const text = paragraph.querySelector('p').textContent;
+  paragraph.querySelector('p').textContent = '';
+  
+  intervalId = setInterval(() => {
+    if (currentLetter < text.length) {
+      paragraph.querySelector('p').textContent += text[currentLetter];
+      currentLetter++;
+    } else {
+      clearInterval(intervalId);
+    }
+  }, 50);
+}
+
+paragraphs[currentParagraph].style.display = 'block';
+startTyping();
+
+function showIt() {
+  document.getElementById("falas").style.display = "block";
+}
+
+setTimeout(showIt, 1200);
 
 
     </script>
