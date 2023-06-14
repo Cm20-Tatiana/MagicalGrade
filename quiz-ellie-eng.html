@@ -21,17 +21,17 @@
 				<button id="next1">Seguinte</button>
 				<div id="p1">
 					<img src="imagens/sprites/Ellie/ellie7.png" class="spritestudent2" alt="">
-					<p>As cores primárias são azul, amarelo e vermelho.</p>
+					<p>The primary colors are blue, yellow, and red.</p>
 				</div>
 				<div id="p2">
 					<img src="imagens/sprites/Ellie/ellie5.png" class="spritestudent2" alt="">
-					<p>A mistura das cores primárias resulta em cores secundárias!</p>
+					<p>The mixture of primary colors results in secondary colors!</p>
 				</div>
 				<div id="p3">
 					<img src="imagens/sprites/Ellie/ellie6.png" class="spritestudent2" alt="">
-					<p>As cores secundárias são laranja, verde e roxo.</p>
+					<p>The secondary colors are orange, green, and purple.</p>
 				</div>
-			</div>
+			
 		</div>
 	</div>
 
@@ -50,6 +50,7 @@ const paragraphs2 = document.querySelectorAll('.dialogo2 > div[id^="p"]');
 let currentParagraph2 = 0;
 
 function student() {
+dialogo2.parentNode.style.display = 'block'
   dialogo2.style.display = 'block';
   currentParagraph2 = 0;
   spritestudent.style.display = 'none';
@@ -71,6 +72,7 @@ function handleClick() {
   }
 }
 
+paragraphs2[currentParagraph2].style.display = 'block';
 
 
 paragraphs2[currentParagraph2].style.display = 'block';

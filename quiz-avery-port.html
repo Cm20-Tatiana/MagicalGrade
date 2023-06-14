@@ -50,6 +50,7 @@ const paragraphs2 = document.querySelectorAll('.dialogo2 > div[id^="p"]');
 let currentParagraph2 = 0;
 
 function student() {
+dialogo2.parentNode.style.display = 'block'
   dialogo2.style.display = 'block';
   currentParagraph2 = 0;
   spritestudent.style.display = 'none';
@@ -71,7 +72,7 @@ function handleClick() {
   }
 }
 
-
+paragraphs2[currentParagraph2].style.display = 'block';
 
 paragraphs2[currentParagraph2].style.display = 'block';
 

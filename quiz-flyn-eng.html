@@ -45,38 +45,37 @@
     </div>
     
     <script>
+
 const dialogo2 = document.querySelector('.dialogo2');
 const buttons2 = dialogo2.querySelectorAll('button');
-const paragraphs2 = dialogo2.querySelectorAll('div[id^="p"]');
+const paragraphs2 = document.querySelectorAll('.dialogo2 > div[id^="p"]');
 let currentParagraph2 = 0;
-const spritestudent = document.querySelector('#spritestudent');
-
-document.getElementById('student').addEventListener('click', student);
 
 function student() {
-    dialogo2.style.display = 'block';
-    currentParagraph2 = 0;
-    spritestudent.style.display = 'none';
-    buttons2.forEach((button) => {
-        button.removeEventListener('click', handleClick);
-        button.addEventListener('click', handleClick);
-    });
-    paragraphs2[currentParagraph2].style.display = 'block';
+dialogo2.parentNode.style.display = 'block'
+  dialogo2.style.display = 'block';
+  currentParagraph2 = 0;
+  spritestudent.style.display = 'none';
+  buttons2.forEach((button) => {
+    button.removeEventListener('click', handleClick); 
+    button.addEventListener('click', handleClick); 
+  });
+  paragraphs2[currentParagraph2].style.display = 'block';
 }
 
 function handleClick() {
-    paragraphs2[currentParagraph2].style.display = 'none';
-    currentParagraph2++;
-    if (currentParagraph2 >= paragraphs2.length) {
-        dialogo2.style.display = 'none';
-        spritestudent.style.display = 'block';
-        buttons2.forEach((button) => {
-            button.removeEventListener('click', handleClick);
-        });
-    } else {
-        paragraphs2[currentParagraph2].style.display = 'block';
-    }
+  paragraphs2[currentParagraph2].style.display = 'none';
+  currentParagraph2++;
+  if (currentParagraph2 >= paragraphs2.length) {
+    dialogo2.style.display = 'none';
+    spritestudent.style.display = 'block';
+  } else {
+    paragraphs2[currentParagraph2].style.display = 'block';
+  }
 }
+
+paragraphs2[currentParagraph2].style.display = 'block';
+
 
 var questionNumber = 1;
 var correctAnswer = 2;
