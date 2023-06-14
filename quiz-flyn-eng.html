@@ -47,55 +47,36 @@
     <script>
 const dialogo2 = document.querySelector('.dialogo2');
 const buttons2 = dialogo2.querySelectorAll('button');
-const paragraphs2 = document.querySelectorAll('.dialogo2 > div[id^="p"]');
+const paragraphs2 = dialogo2.querySelectorAll('div[id^="p"]');
 let currentParagraph2 = 0;
-let currentLetter = 0;
-let intervalId = null;
+const spritestudent = document.querySelector('#spritestudent');
+
+document.getElementById('student').addEventListener('click', student);
 
 function student() {
-  dialogo2.style.display = 'block';
-  currentParagraph2 = 0;
-  spritestudent.style.display = 'none';
-  buttons2.forEach((button) => {
-    button.removeEventListener('click', handleClick); 
-    button.addEventListener('click', handleClick); 
-  });
-  paragraphs2[currentParagraph2].style.display = 'block';
+    dialogo2.style.display = 'block';
+    currentParagraph2 = 0;
+    spritestudent.style.display = 'none';
+    buttons2.forEach((button) => {
+        button.removeEventListener('click', handleClick);
+        button.addEventListener('click', handleClick);
+    });
+    paragraphs2[currentParagraph2].style.display = 'block';
 }
 
 function handleClick() {
-  clearInterval(intervalId);
-  paragraphs2[currentParagraph2].style.display = 'none';
-  currentParagraph2++;
-  if (currentParagraph2 >= paragraphs2.length) {
-    dialogo2.style.display = 'none';
-    spritestudent.style.display = 'block';
-  } else {
-    paragraphs2[currentParagraph2].style.display = 'block';
-    currentLetter = 0;
-    startTyping();
-  }
-}
-
-paragraphs2[currentParagraph2].style.display = 'block';
-startTyping();
-
-function startTyping() {
-  const paragraph = paragraphs2[currentParagraph2]; // Changed from `paragraphs[currentParagraph]` to `paragraphs2[currentParagraph2]`
-  const text = paragraph.querySelector('p').textContent;
-  paragraph.querySelector('p').textContent = '';
-  
-  intervalId = setInterval(() => {
-    if (currentLetter < text.length) {
-      paragraph.querySelector('p').textContent += text[currentLetter];
-      currentLetter++;
+    paragraphs2[currentParagraph2].style.display = 'none';
+    currentParagraph2++;
+    if (currentParagraph2 >= paragraphs2.length) {
+        dialogo2.style.display = 'none';
+        spritestudent.style.display = 'block';
+        buttons2.forEach((button) => {
+            button.removeEventListener('click', handleClick);
+        });
     } else {
-      clearInterval(intervalId);
+        paragraphs2[currentParagraph2].style.display = 'block';
     }
-  }, 50);
 }
-
-
 
 var questionNumber = 1;
 var correctAnswer = 2;

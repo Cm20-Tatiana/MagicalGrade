@@ -45,13 +45,10 @@
     </div>
     
     <script>
-
 const dialogo2 = document.querySelector('.dialogo2');
 const buttons2 = dialogo2.querySelectorAll('button');
 const paragraphs2 = document.querySelectorAll('.dialogo2 > div[id^="p"]');
 let currentParagraph2 = 0;
-let currentLetter = 0;
-let intervalId = null;
 
 function student() {
   dialogo2.style.display = 'block';
@@ -65,7 +62,6 @@ function student() {
 }
 
 function handleClick() {
-  clearInterval(intervalId);
   paragraphs2[currentParagraph2].style.display = 'none';
   currentParagraph2++;
   if (currentParagraph2 >= paragraphs2.length) {
@@ -73,36 +69,12 @@ function handleClick() {
     spritestudent.style.display = 'block';
   } else {
     paragraphs2[currentParagraph2].style.display = 'block';
-    currentLetter = 0;
-    startTyping();
   }
 }
 
+
+
 paragraphs2[currentParagraph2].style.display = 'block';
-startTyping();
-
-function startTyping() {
-  const paragraph = paragraphs2[currentParagraph2]; // Changed from `paragraphs[currentParagraph]` to `paragraphs2[currentParagraph2]`
-  const text = paragraph.querySelector('p').textContent;
-  paragraph.querySelector('p').textContent = '';
-  
-  intervalId = setInterval(() => {
-    if (currentLetter < text.length) {
-      paragraph.querySelector('p').textContent += text[currentLetter];
-      currentLetter++;
-    } else {
-      clearInterval(intervalId);
-    }
-  }, 50);
-}
-
-function showIt() {
-  document.getElementById("falas").style.display = "block";
-}
-
-setTimeout(showIt, 1200);
-
-
 
 var questionNumber = 1;
 var correctAnswer = 2;
@@ -367,7 +339,6 @@ function checkAnswer(selectedOption) {
 					break;
 			}
 		}
-
 
 </script>        
 
