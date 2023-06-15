@@ -136,6 +136,9 @@ background-image: url('imagens/bg1.png');
 
 #falas {
   display: none;
+}
+
+#container1 #falas {
   animation: fadeIn 1s ease-in;
 }
 
@@ -572,7 +575,7 @@ background-image: url('imagens/bg1.png');
   width: 28%;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 45;
+  z-index: 105;
 }
 
 #calculadora {
