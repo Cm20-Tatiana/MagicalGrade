@@ -575,7 +575,7 @@ background-image: url('imagens/bg1.png');
   width: 28%;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 105;
+  z-index: 35;
 }
 
 #calculadora {
