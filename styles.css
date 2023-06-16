@@ -313,7 +313,7 @@ background-image: url('imagens/bg1.png');
 }
 
 .button-group button {
-  font-size: 1.5vw;
+  font-size: 22px;
   width: 230px;
   height: 60px;
   margin-bottom: 10px;
@@ -660,6 +660,7 @@ background-image: url('imagens/bg1.png');
   right: 0;
   text-align: center;
   width: 15vh;
+  font-size: 1.15vw;
 }
 
 
